@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-import Subtag, Tag
+from language_tags.Subtag import Subtag
+from language_tags.Tag import Tag
 
 def check(tag):
-    return Tag(tag).valid();
+    return Tag(tag).valid()

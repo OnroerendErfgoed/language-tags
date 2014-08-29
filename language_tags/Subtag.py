@@ -5,6 +5,7 @@ index = json.load(open("../data/json/index.json"))
 registry = json.load(open("../data/json/registry.json"))
 
 
+
 class Subtag:
     def __init__(self, subtag, type):
 
@@ -19,6 +20,9 @@ class Subtag:
         subtag = str(subtag).lower()
         type = str(type).lower()
 
+        # Include errror codes
+        self.ERR_NONEXISTENT = 1
+        self.ERR_TAG = 2
         class Error(Exception):
             def __init__(self, code, message):
                 self.code = code
@@ -28,16 +32,16 @@ class Subtag:
                 return repr("%s: %s" % (self.code, self.message))
 
         if subtag not in index:
-            raise Error('Subtag.ERR_NONEXISTENT', 'Non-existent subtag %s.' % subtag)
+            raise Error(self.ERR_NONEXISTENT, 'Non-existent subtag %s.' % subtag)
         types = index[subtag]
 
         if type not in types:
-            raise Error('Subtag.ERR_NONEXISTENT', 'Non-existent subtag %s of type %s.' % (subtag, type))
+            raise Error(self.ERR_NONEXISTENT, 'Non-existent subtag %s of type %s.' % (subtag, type))
         i = types[type]
 
         record = registry[i]
         if 'Subtag' not in record:
-            raise Error('Subtag.ERR_TAG', '%s is a %s tag' % (subtag, type))
+            raise Error(self.ERR_TAG, '%s is a %s tag' % (subtag, type))
 
         self.data = {
             "subtag": subtag,
