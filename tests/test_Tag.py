@@ -68,3 +68,25 @@ class TestTag(unittest.TestCase):
         self.assertEqual(tag.type, 'redundant')
         subtags = tag.subtags
         self.assertEqual(subtags, [])
+
+    def test_errors_deprecated_grandfathered(self):
+        # Grandfathered and deprecated, therefore invalid.
+        tag = Tag('art-lojban')
+        self.assertEqual(tag.type, 'grandfathered')
+        self.assertIsNotNone(tag.deprecated)
+        errs = tag.errors
+        self.assertEqual(len(errs), 1)
+        err = errs[0]
+        self.assertEqual(err.code, tag.ERR_DEPRECATED)
+        self.assertEqual(err.tag, 'art-lojban')
+
+    def test_errors_deprecated_redundant(self):
+        # Redundant and deprecated, therefore invalid.
+        tag = Tag('zh-cmn')
+        self.assertEqual(tag.type, 'redundant')
+        self.assertIsNotNone(tag.deprecated)
+        errs = tag.errors
+        self.assertEqual(len(errs), 1)
+        err = errs[0]
+        self.assertEqual(err.code, tag.ERR_DEPRECATED)
+        self.assertEqual(err.tag, 'zh-cmn')
