@@ -1,0 +1,2 @@
+include *.txt *.ini *.cfg *.rst *.md *.json
+recursive-include language_tags *.txt *.json

@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 import json
 from language_tags.Subtag import Subtag
+import os
 
-index = json.load(open("../data/json/index.json"))
-registry = json.load(open("../data/json/registry.json"))
+parent_dir = os.path.dirname(__file__)
+index = json.load(open(os.path.join(parent_dir, "data/json/index.json")))
+registry = json.load(open(os.path.join(parent_dir, "data/json/registry.json")))
 
 
 class Tag:

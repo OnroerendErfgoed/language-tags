@@ -1,26 +1,38 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python
-from setuptools import setup, find_packages
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
+import os
 
-requires = []
+here = os.path.abspath(os.path.dirname(__file__))
+README = open(os.path.join(here, 'README.md')).read()
+
+packages = [
+    'language_tags',
+]
+
+requires = ['pytest',
+            'pytest-cov']
 
 setup(
-    name='language-tags',
+    name='language_tags',
     version='0.0',
     url='https://github.com/OnroerendErfgoed/language-tags',
     license='MIT',
     author='Flanders Heritage Agency',
     author_email='ict@onroerenderfgoed.be',
     description='This project is a Python version of the language-tags Javascript project.',
-    long_description=open('README.md').read(),
+    tolong_description=README,
     zip_safe=False,
     classifiers=[
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3'
     ],
     platforms='any',
-    packages=find_packages(),
-    package_data={'': ['README.md']},
+    packages=packages,
     include_package_data=True,
-    install_requires=requires
+    install_requires=requires,
+    test_suite='nose.collector'
 )

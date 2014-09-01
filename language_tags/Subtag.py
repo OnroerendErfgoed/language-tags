@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 import json
+import os
 
-index = json.load(open("../data/json/index.json"))
-registry = json.load(open("../data/json/registry.json"))
-
+parent_dir = os.path.dirname(__file__)
+index = json.load(open(os.path.join(parent_dir, "data/json/index.json")))
+registry = json.load(open(os.path.join(parent_dir, "data/json/registry.json")))
 
 
 class Subtag:
@@ -23,6 +24,7 @@ class Subtag:
         # Include errror codes
         self.ERR_NONEXISTENT = 1
         self.ERR_TAG = 2
+
         class Error(Exception):
             def __init__(self, code, message):
                 self.code = code
