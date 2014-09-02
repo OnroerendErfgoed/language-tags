@@ -85,7 +85,7 @@ class Tag:
         :return: array of descriptions
         """
         if 'record' in self.data:
-            return self.data['record']['Description'] if 'Description' in self.data['data'] else []
+            return self.data['record']['Description'] if 'Description' in self.data['record'] else []
         else:
             return []
 
@@ -103,6 +103,7 @@ class Tag:
             return subtags[0]
 
         for i, subtag in enumerate(subtags[1:]):
+            i += 1
             previous_subtag = subtags[i - 1]
 
             if len(previous_subtag) == 1:
@@ -266,7 +267,7 @@ class Tag:
                 if len(found['extlang']) > 1:
                     errors.append(error(self.ERR_EXTRA_EXTLANG, subtag))
             elif 'script' == type:
-                if len(found['language']) > 1:
+                if len(found['script']) > 1:
                     errors.append(error(self.ERR_EXTRA_SCRIPT, subtag))
                 # Check if script is same as language suppress-script.
                 else:
@@ -279,14 +280,16 @@ class Tag:
                     for variant in found['variant']:
                         if variant.format == subtag.format:
                             errors.append(error(self.ERR_DUPLICATE_VARIANT, subtag))
+                            break
 
         # Check for correct order.
-        priority = dict(language=4, extlang=5, script=6, region=7, variant=8)
-        for i, subtag in enumerate(subtags):
-            next = subtags[i + 1]
-            if next:
-                if priority[subtag.type] > priority[next.type]:
-                    errors.append(error(self.ERR_WRONG_ORDER, [subtag, next]))
+        if len(subtags) > 1:
+            priority = dict(language=4, extlang=5, script=6, region=7, variant=8)
+            for i, subtag in enumerate(subtags[0:len(subtags)-1]):
+                next = subtags[i + 1]
+                if next:
+                    if priority[subtag.type] > priority[next.type]:
+                        errors.append(error(self.ERR_WRONG_ORDER, [subtag, next]))
 
         return errors
 
@@ -315,7 +318,7 @@ class Tag:
                 message += ' Use \'%s\' instead.' % data['record']['Preferred-Value']
 
         if code == self.ERR_SUBTAG_DEPRECATED:
-            message = 'The subtag \'%s\' is deprecated.' % subtag
+            message = 'The subtag \'%s\' is deprecated.' % subtag.format
 
         if code == self.ERR_NO_LANGUAGE:
             if not len(data['tag']):
@@ -333,23 +336,23 @@ class Tag:
                     self.ERR_EXTRA_EXTLANG,
                     self.ERR_EXTRA_REGION,
                     self.ERR_EXTRA_SCRIPT]:
-            message = 'Extra %s subtag \'%s\' found.' % (subtag.type, subtag)
+            message = 'Extra %s subtag \'%s\' found.' % (subtag.type, subtag.format)
 
         if code == self.ERR_DUPLICATE_VARIANT:
-            message = 'Duplicate variant subtag \'%s\' found.' % subtag
+            message = 'Duplicate variant subtag \'%s\' found.' % subtag.format
 
         if code == self.ERR_WRONG_ORDER:
-            message = 'The subtag \'%s\' should not appear before \'%s\'.' % (subtag[0], subtag[1])
+            message = 'The subtag \'%s\' should not appear before \'%s\'.' % (subtag[0].format, subtag[1].format)
 
         if code == self.ERR_SUPPRESS_SCRIPT:
-            message = 'The script subtag \'%s\' is the same as the language suppress-script.' % subtag
+            message = 'The script subtag \'%s\' is the same as the language suppress-script.' % subtag.format
 
         class Error(Exception):
             def __init__(self, code, message, tag, subtag):
                 self.code = code
                 self.message = message
                 self.tag = tag
-                self.subtag = subtag
+                self.subtag = subtag.format if isinstance(subtag, Subtag) else subtag
 
             def __str__(self):
                 return repr("%s: %s (Tag %s; Subtag %s)" % (self.code, self.message, self.tag, str(self.subtag)))
