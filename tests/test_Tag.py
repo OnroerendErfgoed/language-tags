@@ -14,29 +14,29 @@ class TestTag(unittest.TestCase):
 
     def test_subtags_correct_type(self):
         tag = Tag('en')
-        subtages = tag.subtags
-        self.assertEqual(len(subtages), 1)
-        self.assertEqual(subtages[0].type, 'language')
-        self.assertEqual(subtages[0].format, 'en')
+        subtags = tag.subtags
+        self.assertEqual(len(subtags), 1)
+        self.assertEqual(subtags[0].type, 'language')
+        self.assertEqual(subtags[0].format, 'en')
 
         # Lowercase - lookup should be case insensitive.
         tag = Tag('en-mt')
-        subtages = tag.subtags
-        self.assertEqual(len(subtages), 2)
-        self.assertEqual(subtages[0].type, 'language')
-        self.assertEqual(subtages[0].format, 'en')
-        self.assertEqual(subtages[1].type, 'region')
-        self.assertEqual(subtages[1].format, 'MT')
+        subtags = tag.subtags
+        self.assertEqual(len(subtags), 2)
+        self.assertEqual(subtags[0].type, 'language')
+        self.assertEqual(subtags[0].format, 'en')
+        self.assertEqual(subtags[1].type, 'region')
+        self.assertEqual(subtags[1].format, 'MT')
 
         tag = Tag('en-mt-arab')
-        subtages = tag.subtags
-        self.assertEqual(len(subtages), 3)
-        self.assertEqual(subtages[0].type, 'language')
-        self.assertEqual(subtages[0].format, 'en')
-        self.assertEqual(subtages[1].type, 'region')
-        self.assertEqual(subtages[1].format, 'MT')
-        self.assertEqual(subtages[2].type, 'script')
-        self.assertEqual(subtages[2].format, 'Arab')
+        subtags = tag.subtags
+        self.assertEqual(len(subtags), 3)
+        self.assertEqual(subtags[0].type, 'language')
+        self.assertEqual(subtags[0].format, 'en')
+        self.assertEqual(subtags[1].type, 'region')
+        self.assertEqual(subtags[1].format, 'MT')
+        self.assertEqual(subtags[2].type, 'script')
+        self.assertEqual(subtags[2].format, 'Arab')
 
     def test_only_existent_subtags(self):
         tag = Tag('hello')
@@ -60,7 +60,7 @@ class TestTag(unittest.TestCase):
     def test_subtags_of_grandfathered_tag(self):
         tag = Tag('en-GB-oed')
         self.assertEqual(tag.type, 'grandfathered')
-        subtags =tag.subtags
+        subtags = tag.subtags
         self.assertEqual(subtags, [])
 
     def test_subtags_of_redundant_tag(self):
@@ -80,6 +80,10 @@ class TestTag(unittest.TestCase):
         self.assertEqual(err.code, tag.ERR_DEPRECATED)
         self.assertEqual(err.tag, 'art-lojban')
         self.assertEqual(err.message, 'The tag art-lojban is deprecated. Use \'jbo\' instead.')
+        self.assertIn(str(err.code), err.__str__())
+        self.assertIn(err.message, err.__str__())
+        self.assertIn(err.tag, err.__str__())
+        self.assertIn(str(err.subtag), err.__str__())
 
     def test_errors_deprecated_redundant(self):
         # Redundant and deprecated, therefore invalid.
@@ -373,6 +377,8 @@ class TestTag(unittest.TestCase):
         self.assertEqual(tag.type, 'grandfathered')
         self.assertIsNone(tag.deprecated)
 
+        self.assertIsNone(Tag('en').deprecated)
+
     def test_added(self):
         # Redundant and deprecated.
         tag = Tag('zh-cmn-Hant')
@@ -396,6 +402,8 @@ class TestTag(unittest.TestCase):
         self.assertIsNone(tag.deprecated)
         self.assertEqual(tag.added, '2003-07-09')
 
+        self.assertIsNone(Tag('en').added)
+
     def test_description(self):
         tag = Tag('en-GB-oed')
         self.assertEqual(tag.type, 'grandfathered')
@@ -406,6 +414,7 @@ class TestTag(unittest.TestCase):
 
     def test_format(self):
         self.assertEqual(Tag('en').format, 'en')
+        self.assertEqual(Tag('en-x-more-than-eight-chars').format, 'en-x-more-than-eight-chars')
         self.assertEqual(Tag('En').format, 'en')
         self.assertEqual(Tag('EN').format, 'en')
         self.assertEqual(Tag('eN').format, 'en')
@@ -413,10 +422,11 @@ class TestTag(unittest.TestCase):
         self.assertEqual(Tag('en-gb-oed').format, 'en-GB-oed')
         self.assertEqual(Tag('az-latn').format, 'az-Latn')
         self.assertEqual(Tag('ZH-hant-hK').format, 'zh-Hant-HK')
-        # todo
 
     def test_perferred(self):
         tag = Tag('zh-cmn-Hant')
         self.assertEqual(tag.type, 'redundant')
-        self.assertTrue(tag.deprecated)
-        # todo
+        self.assertIsNotNone(tag.deprecated)
+        self.assertIsNotNone(tag.preferred)
+        self.assertEqual(tag.preferred.format, 'cmn-Hant')
+        self.assertIsNone(Tag('cmn-Hant').preferred)

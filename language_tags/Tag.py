@@ -42,6 +42,18 @@ class Tag:
         self.ERR_EXTRA_LANGUAGE = 12
 
     @property
+    def preferred(self):
+        """
+        Get the preferred tag if the deprecated or redundant tag has one
+
+        :return: preferred tag object
+        """
+        if 'record' in self.data:
+            return Tag(self.data['record']['Preferred-Value']) if 'Preferred-Value' in self.data['record'] else None
+        else:
+            return None
+
+    @property
     def type(self):
         """
         Get the type of the tag (either grandfathered, redundant or tag see  RFC 5646 section 2.2.8.)
@@ -102,24 +114,23 @@ class Tag:
         if len(subtags) == 1:
             return subtags[0]
 
+        formatted_tag = subtags[0]
+        private_tag = False
         for i, subtag in enumerate(subtags[1:]):
-            i += 1
-            previous_subtag = subtags[i - 1]
 
-            if len(previous_subtag) == 1:
-                return previous_subtag + subtag.upper()
+            if len(subtags[i]) == 1 or private_tag:
+                formatted_tag += '-' + subtag
+                private_tag = True
 
             elif len(subtag) == 2:
-                return previous_subtag + '-' + subtag.upper()
+                formatted_tag += '-' + subtag.upper()
 
             elif len(subtag) == 4:
-                return previous_subtag + '-' + subtag.capitalize()
+                formatted_tag += '-' + subtag.capitalize()
+            else:
+                formatted_tag += '-' + subtag
 
-            return previous_subtag + '-' + subtag
-
-
-
-
+        return formatted_tag
 
     @property
     def subtags(self):
@@ -136,9 +147,6 @@ class Tag:
             return subtags
 
         codes = data['tag'].split('-')
-        if not len(codes):
-            return subtags
-
         # Try and find the language tag.
         for i, code in enumerate(codes):
 

@@ -92,3 +92,20 @@ class TestSubtag(unittest.TestCase):
 
     def test_comments(self):
         self.assertEqual(Subtag('YU', 'region').comments, ['see BA, HR, ME, MK, RS, or SI'])
+
+    def test_errors(self):
+        self.assertRaises(Exception, Subtag, '123', 'region')
+        with self.assertRaises(Exception) as context:
+            Subtag('123', 'region')
+        self.assertIn('Non-existent subtag 123.', context.exception.message)
+        self.assertIn('Non-existent subtag 123.', context.exception.__str__())
+
+        self.assertRaises(Exception, Subtag, 'art-lojban', 'grandfathered')
+        with self.assertRaises(Exception) as context:
+            Subtag('art-lojban', 'grandfathered')
+        self.assertIn('art-lojban is a grandfathered tag', context.exception.message)
+
+        self.assertRaises(Exception, Subtag, 'nl', 'variant')
+        with self.assertRaises(Exception) as context:
+            Subtag('nl', 'variant')
+        self.assertIn('Non-existent subtag nl of type variant.', context.exception.message)
