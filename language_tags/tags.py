@@ -5,6 +5,7 @@ import json
 from language_tags.Subtag import Subtag
 from language_tags.Tag import Tag
 
+
 parent_dir = os.path.dirname(__file__)
 index = json.load(open(os.path.join(parent_dir, "data/json/index.json")))
 registry = json.load(open(os.path.join(parent_dir, "data/json/registry.json")))
@@ -106,6 +107,22 @@ class tags(Tag):
 
         for registry_item in registry:
             test(registry_item)
+
+        return results
+
+    @classmethod
+    def description(cls, tag):
+        """
+        Gets a list of descriptions given the tag. The list can be empty
+
+        :param tag: tag
+        :return: list of descriptions
+        """
+        tag_object = Tag(tag)
+        results = tag_object.descriptions
+        subtags = tag_object.subtags
+        for subtag in subtags:
+            results += subtag.description
 
         return results
 

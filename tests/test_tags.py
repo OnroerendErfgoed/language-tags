@@ -88,3 +88,15 @@ class TestSubtag(unittest.TestCase):
 
     def test_date(self):
         self.assertIsNotNone(re.compile('\d{4}\-\d{2}\-\d{2}').search(tags.date()))
+
+    def test_description(self):
+        description = tags.description('nl-BE')
+        self.assertIn('Dutch', description)
+        self.assertIn('Flemish', description)
+        self.assertIn('Belgium', description)
+        description = tags.description('az-Arab')
+        self.assertIn('Azerbaijani in Arabic script', description)
+        description = tags.description('123')
+        self.assertEqual(0, len(description))
+        description = tags.description('vls')
+        self.assertIn('Vlaams', description)
