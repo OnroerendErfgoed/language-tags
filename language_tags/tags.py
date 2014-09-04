@@ -11,18 +11,19 @@ index = json.load(open(os.path.join(parent_dir, "data/json/index.json")))
 registry = json.load(open(os.path.join(parent_dir, "data/json/registry.json")))
 
 class tags():
-    # Only possible with python >= 3
-    # def __new__(cls, tag):
-    #     """
-    #     Get a Tag object of a (hyphen-separated) tag
-    #
-    #     :param tag: (hyphen-seperated) tag
-    #     :return: Tag object
-    #     """
-    #     return Tag(tag)
 
-    @classmethod
-    def check(cls, tag):
+    @staticmethod
+    def tag(tag):
+        """
+        Get a Tag object of a (hyphen-separated) tag
+
+        :param tag: (hyphen-seperated) tag
+        :return: Tag object
+        """
+        return Tag(tag)
+
+    @staticmethod
+    def check(tag):
         """
         Check if a (hyphen-separated) tag is valid
 
@@ -31,8 +32,8 @@ class tags():
         """
         return Tag(tag).valid
 
-    @classmethod
-    def types(cls, subtag):
+    @staticmethod
+    def types(subtag):
         """
         Get the types of a subtag (excludes redundant and grandfathered). It can return an empty list.
 
@@ -45,8 +46,8 @@ class tags():
         else:
             return []
 
-    @classmethod
-    def subtags(cls, subtags):
+    @staticmethod
+    def subtags(subtags):
         """
         Get a list of existing Subtag objects given the input subtag(s)
 
@@ -64,8 +65,8 @@ class tags():
 
         return result
 
-    @classmethod
-    def filter(cls, subtags):
+    @staticmethod
+    def filter(subtags):
         """
         Get a list of non-existing Subtag objects given the input subtag(s)
 
@@ -76,8 +77,8 @@ class tags():
             subtags = [subtags]
         return [subtag for subtag in subtags if len(tags.types(subtag)) == 0]
 
-    @classmethod
-    def search(cls, description, all=False):
+    @staticmethod
+    def search(description, all=False):
         """
         Gets a list of Subtags Objects where the description matches
 
@@ -110,8 +111,8 @@ class tags():
 
         return results
 
-    @classmethod
-    def description(cls, tag):
+    @staticmethod
+    def description(tag):
         """
         Gets a list of descriptions given the tag. The list can be empty
 
@@ -126,8 +127,8 @@ class tags():
 
         return results
 
-    @classmethod
-    def languages(cls, macrolanguage):
+    @staticmethod
+    def languages(macrolanguage):
         """
         Get a list of Subtag objects given the macrolanguage
 
@@ -149,8 +150,8 @@ class tags():
 
         return results
 
-    @classmethod
-    def type(cls, subtag, type):
+    @staticmethod
+    def type(subtag, type):
         """
         Get a Subtag object by subtag and type. Can be None if not exists.
 
@@ -165,8 +166,8 @@ class tags():
                 return Subtag(subtag, type)
         return None
 
-    @classmethod
-    def language(cls, subtag):
+    @staticmethod
+    def language(subtag):
         """
         Get a language Subtag object of the subtag string
 
@@ -175,8 +176,8 @@ class tags():
         """
         return tags.type(subtag, 'language')
 
-    @classmethod
-    def region(cls, subtag):
+    @staticmethod
+    def region(subtag):
         """
         Get a region Subtag object of the subtag string
 
@@ -185,8 +186,8 @@ class tags():
         """
         return tags.type(subtag, 'region')
 
-    @classmethod
-    def date(cls):
+    @staticmethod
+    def date():
         """
         Get the file date of the underlying data as a string
 

@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
 import unittest
-from language_tags.tags import tags
 import re
 
+from language_tags import tags
 
 class TestSubtag(unittest.TestCase):
 
-    # def test_get_tag(self):
-    #     tag = tags('en')
-    #     self.assertIsNotNone(tag)
-    #
-    #     tag = tags('en-gb')
-    #     self.assertIsNotNone(tag)
-    #     self.assertEqual(tag.format, 'en-GB')
+    def test_get_tag(self):
+        tag = tags.tag('en')
+        self.assertIsNotNone(tag)
+
+        tag = tags.tag('en-gb')
+        self.assertIsNotNone(tag)
+        self.assertEqual(tag.format, 'en-GB')
 
     def test_checks(self):
         self.assertTrue(tags.check('en'))
