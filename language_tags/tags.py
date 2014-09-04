@@ -10,16 +10,16 @@ parent_dir = os.path.dirname(__file__)
 index = json.load(open(os.path.join(parent_dir, "data/json/index.json")))
 registry = json.load(open(os.path.join(parent_dir, "data/json/registry.json")))
 
-
-class tags(Tag):
-    def __new__(cls, tag):
-        """
-        Get a Tag object of a (hyphen-separated) tag
-
-        :param tag: (hyphen-seperated) tag
-        :return: Tag object
-        """
-        return Tag(tag)
+class tags():
+    # Only possible with python >= 3
+    # def __new__(cls, tag):
+    #     """
+    #     Get a Tag object of a (hyphen-separated) tag
+    #
+    #     :param tag: (hyphen-seperated) tag
+    #     :return: Tag object
+    #     """
+    #     return Tag(tag)
 
     @classmethod
     def check(cls, tag):
