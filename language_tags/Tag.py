@@ -325,34 +325,34 @@ class Tag:
             if 'Preferred-Value' in self.data['record']:
                 message += ' Use \'%s\' instead.' % data['record']['Preferred-Value']
 
-        if code == self.ERR_SUBTAG_DEPRECATED:
+        elif code == self.ERR_SUBTAG_DEPRECATED:
             message = 'The subtag \'%s\' is deprecated.' % subtag.format
 
-        if code == self.ERR_NO_LANGUAGE:
+        elif code == self.ERR_NO_LANGUAGE:
             if not len(data['tag']):
                 message = 'Empty tag.'
             else:
                 message = 'Missing language tag in \'%s\'.' % data['tag']
 
-        if code == self.ERR_UNKNOWN:
+        elif code == self.ERR_UNKNOWN:
             message = 'Unknown code \'%s\'' % subtag
 
-        if code == self.ERR_TOO_LONG:
+        elif code == self.ERR_TOO_LONG:
             message = 'The private-use subtag \'%s\' is too long.' % subtag
 
-        if code in [self.ERR_EXTRA_LANGUAGE,
+        elif code in [self.ERR_EXTRA_LANGUAGE,
                     self.ERR_EXTRA_EXTLANG,
                     self.ERR_EXTRA_REGION,
                     self.ERR_EXTRA_SCRIPT]:
             message = 'Extra %s subtag \'%s\' found.' % (subtag.type, subtag.format)
 
-        if code == self.ERR_DUPLICATE_VARIANT:
+        elif code == self.ERR_DUPLICATE_VARIANT:
             message = 'Duplicate variant subtag \'%s\' found.' % subtag.format
 
-        if code == self.ERR_WRONG_ORDER:
+        elif code == self.ERR_WRONG_ORDER:
             message = 'The subtag \'%s\' should not appear before \'%s\'.' % (subtag[0].format, subtag[1].format)
 
-        if code == self.ERR_SUPPRESS_SCRIPT:
+        elif code == self.ERR_SUPPRESS_SCRIPT:
             message = 'The script subtag \'%s\' is the same as the language suppress-script.' % subtag.format
 
         class Error(Exception):
