@@ -13,12 +13,11 @@ packages = [
     'language_tags',
 ]
 
-requires = ['pytest',
-            'pytest-cov']
+requires = []
 
 setup(
     name='language_tags',
-    version='0.0',
+    version='0.1.0',
     url='https://github.com/OnroerendErfgoed/language-tags',
     license='MIT',
     author='Flanders Heritage Agency',
