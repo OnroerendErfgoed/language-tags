@@ -5,9 +5,9 @@ API Documentation
 Class tags
 ----------
 
-.. automodule:: language_tags
+.. automodule:: language_tags.tags
 
-    .. autoclass:: language_tags.tags
+    .. autoclass:: language_tags.tags.tags
         :members:
 
 
