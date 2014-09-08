@@ -5,18 +5,24 @@ API Documentation
 Class tags
 ----------
 
-.. autoclass:: language_tags.tags
-    :members:
+.. automodule:: language_tags.Tag
+
+    .. autoclass:: language_tags.tags
+        :members:
 
 
 Class Tag
 ---------
 
-.. autoclass:: language_tags.Tag.Tag
-    :members:
+.. automodule:: language_tags.Tag
+
+    .. autoclass:: language_tags.Subtag.Subtag
+        :members:
 
 Class Subtag
 ------------
 
-.. autoclass:: language_tags.Subtag.Subtag
-    :members:
+.. automodule:: language_tags.Tag
+
+    .. autoclass:: language_tags.Subtag.Subtag
+        :members:

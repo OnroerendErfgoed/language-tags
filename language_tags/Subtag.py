@@ -15,7 +15,7 @@ class Subtag:
 
         :param str subtag: subtage.
         :param str type: can be 'language', 'extlang', 'script', 'region' or 'variant'.
-        :return: :raise Error: Checks for `Subtag.ERR_NONEXISTENT` and `Subtag.ERR_TAG`.
+        :return: :raise Error: Checks for ``Subtag.ERR_NONEXISTENT`` and ``Subtag.ERR_TAG``.
         """
         # Lowercase for consistency (case is only a formatting convention, not a standard requirement).
         subtag = str(subtag).lower()
