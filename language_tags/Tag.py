@@ -12,9 +12,9 @@ class Tag:
     def __init__(self, tag):
         # Lowercase for consistency (case is only a formatting convention, not a standard requirement).
         """
-        Tags for Identifying Languages
+        Tags for Identifying Languages based on BCP 47 (RFC 5646) and the latest IANA language subtag registry.
 
-        :param tag: tag code
+        :param str tag: (hyphen-separated) tag.
         """
         tag = str(tag).strip().lower()
 
@@ -44,9 +44,9 @@ class Tag:
     @property
     def preferred(self):
         """
-        Get the preferred tag if the deprecated or redundant tag has one
+        Get the preferred :class:`language_tags.Tag.Tag` of the deprecated or redundant tag.
 
-        :return: preferred tag object
+        :return: preferred :class:`language_tags.Tag.Tag` if the deprecated or redundant tag has one, otherwise None.
         """
         if 'record' in self.data:
             return Tag(self.data['record']['Preferred-Value']) if 'Preferred-Value' in self.data['record'] else None
@@ -56,9 +56,9 @@ class Tag:
     @property
     def type(self):
         """
-        Get the type of the tag (either grandfathered, redundant or tag see  RFC 5646 section 2.2.8.)
+        Get the type of the tag (either grandfathered, redundant or tag see RFC 5646 section 2.2.8.).
 
-        :return: type of the tag (string)
+        :return: string -- type of the tag.
         """
         if 'record' in self.data:
             return self.data['record']['Type']
@@ -67,9 +67,9 @@ class Tag:
     @property
     def added(self):
         """
-        Get the date string of grandfathered or redundant tag when it was added to the registry
+        Get the date string of grandfathered or redundant tag when it was added to the registry.
 
-        :return: added date string
+        :return: added date string if the deprecated or redundant tag has one, otherwise None.
         """
         if 'record' in self.data:
             return self.data['record']['Added'] if 'Added' in self.data['record'] else None
@@ -79,9 +79,9 @@ class Tag:
     @property
     def deprecated(self):
         """
-        Get the deprecation date of grandfathered or redundant tag if the tag is deprecated
+        Get the deprecation date of grandfathered or redundant tag if the tag is deprecated.
 
-        :return: deprecation date string
+        :return: deprecation date string if the deprecated or redundant tag has one, otherwise None.
         """
         if 'record' in self.data:
             return self.data['record']['Deprecated'] if 'Deprecated' in self.data['record'] else None
@@ -91,10 +91,9 @@ class Tag:
     @property
     def descriptions(self):
         """
-        Get the array of descriptions of the grandfathered or redundant tag.
-        If no descriptions available, it returns an empty array
+        Get the list of descriptions of the grandfathered or redundant tag.
 
-        :return: array of descriptions
+        :return: list of descriptions. If no descriptions available, it returns an empty list.
         """
         if 'record' in self.data:
             return self.data['record']['Description'] if 'Description' in self.data['record'] else []
@@ -107,7 +106,7 @@ class Tag:
         Get format according to algorithm defined in RFC 5646 section 2.1.1.
 
 
-        :return: formatted tag
+        :return: formatted tag string.
         """
         tag = self.data['tag']
         subtags = tag.split('-')
@@ -135,9 +134,10 @@ class Tag:
     @property
     def subtags(self):
         """
-        Get the subtags of the tag
+        Get the :class:`language_tags.Subtag.Subtag` objects of the tag.
 
-        :return: list of subtags that are part of the tag
+        :return: list of :class:`language_tags.Subtag.Subtag` objects that are part of the tag.
+            The return list can be empty.
         """
         data = self.data
         subtags = []
@@ -202,9 +202,9 @@ class Tag:
     @property
     def valid(self):
         """
-        Checks whether the tag is valid
+        Checks whether the tag is valid.
 
-        :return: True if valid otherwise False
+        :return: Bool -- True if valid otherwise False.
         """
         return len(self.errors) < 1
 
@@ -212,11 +212,10 @@ class Tag:
     def errors(self):
         """
         Get the errors of the tag.
-        If the tag is valid, it returns empty array.
-        If invalid then the array will consist of errors containing each a code and message explaining the error.
-        Each error also refers to the respective (sub)tag(s)
+        If invalid then the list will consist of errors containing each a code and message explaining the error.
+        Each error also refers to the respective (sub)tag(s).
 
-        :return: array of errors of the tag
+        :return: list of errors of the tag. If the tag is valid, it returns an empty list.
         """
         errors = []
         data = self.data
@@ -303,16 +302,28 @@ class Tag:
 
     def error(self, code, subtag=None):
         """
-        Get the Tag.error of a specific Tag error code.
-        The error creates a message explaining the error given the Tag error code.
-        It also refers to the respective (sub)tag(s)
+        Get the :class:`language_tags.Tag.Tag.Error` of a specific Tag error code.
+        The error creates a message explaining the error.
+        It also refers to the respective (sub)tag(s).
 
-        :param code: a Tag error error (1=Tag.ERR_DEPRECATED, 2=Tag.ERR_NO_LANGUAGE, 3=Tag.ERR_UNKNOWN,
-        4=Tag.ERR_TOO_LONG, 5=Tag.ERR_EXTRA_REGION, 6=Tag.ERR_EXTRA_EXTLANG, 7=Tag.ERR_EXTRA_SCRIPT,
-        8=Tag.ERR_DUPLICATE_VARIANT, 9=Tag.ERR_WRONG_ORDER, 10=Tag.ERR_SUPPRESS_SCRIPT, 11=Tag.ERR_SUBTAG_DEPRECATED,
-        12=Tag.ERR_EXTRA_LANGUAGE)
-        :param subtag: The (sub)tag(s) creating the error
-        :return: An exception class containing a Tag error input code, derived message with the given subtag input
+        :param int code: a Tag error error:
+
+            * 1 = Tag.ERR_DEPRECATED
+            * 2 = Tag.ERR_NO_LANGUAGE
+            * 3 = Tag.ERR_UNKNOWN,
+            * 4 = Tag.ERR_TOO_LONG
+            * 5 = Tag.ERR_EXTRA_REGION
+            * 6 = Tag.ERR_EXTRA_EXTLANG
+            * 7 = Tag.ERR_EXTRA_SCRIPT,
+            * 8 = Tag.ERR_DUPLICATE_VARIANT
+            * 9 = Tag.ERR_WRONG_ORDER
+            * 10 = Tag.ERR_SUPPRESS_SCRIPT,
+            * 11 = Tag.ERR_SUBTAG_DEPRECATED
+            * 12 = Tag.ERR_EXTRA_LANGUAGE
+
+        :param subtag: string (sub)tag or list of string (sub)tags creating the error.
+        :return: An exception class containing: a Tag error input code, the derived message with the given (sub)tag(s).
+            input
         """
         message = ""
         data = self.data

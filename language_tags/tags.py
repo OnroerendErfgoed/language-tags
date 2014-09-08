@@ -15,30 +15,31 @@ class tags():
     @staticmethod
     def tag(tag):
         """
-        Get a Tag object of a (hyphen-separated) tag
+        Get a :class:`language_tags.Tag.Tag` of a string (hyphen-separated) tag.
 
-        :param tag: (hyphen-seperated) tag
-        :return: Tag object
+        :param str tag: (hyphen-separated) tag.
+        :return: :class:`language_tags.Tag.Tag`.
         """
         return Tag(tag)
 
     @staticmethod
     def check(tag):
         """
-        Check if a (hyphen-separated) tag is valid
+        Check if a string (hyphen-separated) tag is valid.
 
-        :param tag: (hyphen-separated) tag
-        :return: bool (True if valid)
+        :param str tag: (hyphen-separated) tag.
+        :return: bool -- True if valid.
         """
         return Tag(tag).valid
 
     @staticmethod
     def types(subtag):
         """
-        Get the types of a subtag (excludes redundant and grandfathered). It can return an empty list.
+        Get the types of a subtag string (excludes redundant and grandfathered).
 
-        :param subtag: subtag
-        :return: a list of types
+
+        :param str subtag: subtag.
+        :return: list of types. The return list can be empty.
         """
         if subtag in index:
             types = index[subtag]
@@ -49,10 +50,10 @@ class tags():
     @staticmethod
     def subtags(subtags):
         """
-        Get a list of existing Subtag objects given the input subtag(s)
+        Get a list of existing :class:`language_tags.Subtag.Subtag` objects given the input subtag(s).
 
-        :param subtags: subtag of list of subtags
-        :return: a list of existing Subtag objects
+        :param subtags: string subtag or list of string subtags.
+        :return: a list of existing :class:`language_tags.Subtag.Subtag` objects. The return list can be empty.
         """
         result = []
 
@@ -68,10 +69,10 @@ class tags():
     @staticmethod
     def filter(subtags):
         """
-        Get a list of non-existing Subtag objects given the input subtag(s)
+        Get a list of non-existing string subtag(s) given the input string subtag(s).
 
-        :param subtags: subtag of list of subtags
-        :return: a list of non-existing Subtag objects
+        :param subtags: string subtag or a list of string subtags.
+        :return: list of non-existing string subtags. The return list can be empty.
         """
         if not isinstance(subtags, list):
             subtags = [subtags]
@@ -80,11 +81,16 @@ class tags():
     @staticmethod
     def search(description, all=False):
         """
-        Gets a list of Subtags Objects where the description matches
+        Gets a list of :class:`language_tags.Subtag.Subtag` objects where the description matches.
 
-        :param description: a string or compiled regular expression (For example re.compile('\d{4}'))
-        :param all: boolean parameter. If set on True grandfathered and redundant tags will be included
-        :return: list of Subtag Objects which include the description
+        :param description: a string or compiled regular expression. For example: ``search(re.compile('\d{4}'))`` if the
+            description of the returned subtag must contain four contiguous numerical digits.
+        :type description: str or RegExp
+        :param all: If set on True grandfathered and redundant tags will be included in the return
+            list.
+        :type all: bool, optional
+        :return: list of :class:`language_tags.Subtag.Subtag` objects each including the description.
+            The return list can be empty.
         """
         results = []
 
@@ -114,10 +120,10 @@ class tags():
     @staticmethod
     def description(tag):
         """
-        Gets a list of descriptions given the tag. The list can be empty
+        Gets a list of descriptions given the tag.
 
-        :param tag: tag
-        :return: list of descriptions
+        :param str tag: (hyphen-separated) tag.
+        :return: list of string descriptions. The return list can be empty.
         """
         tag_object = Tag(tag)
         results = tag_object.descriptions
@@ -130,11 +136,11 @@ class tags():
     @staticmethod
     def languages(macrolanguage):
         """
-        Get a list of Subtag objects given the macrolanguage
+        Get a list of :class:`language_tags.Subtag.Subtag` objects given the string macrolanguage.
 
-        :param macrolanguage: subtag macrolanguage
-        :return: a list of the macrolanguage Subtag objects
-        :raise Exception: if the macrolanguage does not exists
+        :param string macrolanguage: subtag macrolanguage.
+        :return: a list of the macrolanguage :class:`language_tags.Subtag.Subtag` objects.
+        :raise Exception: if the macrolanguage does not exists.
         """
         results = []
 
@@ -153,11 +159,11 @@ class tags():
     @staticmethod
     def type(subtag, type):
         """
-        Get a Subtag object by subtag and type. Can be None if not exists.
+        Get a :class:`language_tags.Subtag.Subtag` by subtag and type. Can be None if not exists.
 
-        :param subtag: subtag string
-        :param type: string type
-        :return: Subtag object if exists
+        :param str subtag: subtag.
+        :param str type: type of the subtag.
+        :return: :class:`language_tags.Subtag.Subtag` if exists, otherwise None.
         """
         subtag = subtag.lower()
         if subtag in index:
@@ -169,29 +175,29 @@ class tags():
     @staticmethod
     def language(subtag):
         """
-        Get a language Subtag object of the subtag string
+        Get a language :class:`language_tags.Subtag.Subtag` of the subtag string.
 
-        :param subtag: subtag string
-        :return: language Subtag object if exists
+        :param str subtag: subtag.
+        :return: language :class:`language_tags.Subtag.Subtag` if exists, otherwise None.
         """
         return tags.type(subtag, 'language')
 
     @staticmethod
     def region(subtag):
         """
-        Get a region Subtag object of the subtag string
+        Get a region :class:`language_tags.Subtag.Subtag` of the subtag string.
 
-        :param subtag: subtag string
-        :return: region Subtag object if exists
+        :param str subtag: subtag.
+        :return: region :class:`language_tags.Subtag.Subtag` if exists, otherwise None.
         """
         return tags.type(subtag, 'region')
 
     @staticmethod
     def date():
         """
-        Get the file date of the underlying data as a string
+        Get the file date of the underlying data as a string.
 
-        :return: date as string
+        :return: date as string (for example: '2014-03-27').
         """
         meta = json.load(open(os.path.join(parent_dir, "data/json/meta.json")))
         return meta['File-Date']
