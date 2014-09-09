@@ -23,6 +23,7 @@ This Python API offers a way to validate and lookup languages tags.
 
    introduction
    api
+   history
 
 
 Indices and tables

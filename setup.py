@@ -23,7 +23,7 @@ setup(
     author='Flanders Heritage Agency',
     author_email='ict@onroerenderfgoed.be',
     description='This project is a Python version of the language-tags Javascript project.',
-    tolong_description=README,
+    long_description=README,
     zip_safe=False,
     classifiers=[
         'Topic :: Software Development :: Libraries :: Python Modules',
