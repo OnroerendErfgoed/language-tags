@@ -7,7 +7,8 @@ except ImportError:
 import os
 
 here = os.path.abspath(os.path.dirname(__file__))
-README = open(os.path.join(here, 'README.md')).read()
+README = open(os.path.join(here, 'README.rst')).read()
+HISTORY = open(os.path.join(here, 'HISTORY.rst')).read()
 
 packages = [
     'language_tags',
@@ -23,7 +24,7 @@ setup(
     author='Flanders Heritage Agency',
     author_email='ict@onroerenderfgoed.be',
     description='This project is a Python version of the language-tags Javascript project.',
-    long_description=README,
+    long_description=README + '\n\n' + HISTORY,
     zip_safe=False,
     classifiers=[
         'Topic :: Software Development :: Libraries :: Python Modules',

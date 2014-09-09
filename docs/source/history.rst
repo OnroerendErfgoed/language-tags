@@ -4,7 +4,4 @@
 History
 =======
 
-0.1.0
-_____
-
-- Initial version
+.. include:: ../../HISTORY.rst

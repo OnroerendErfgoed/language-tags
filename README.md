@@ -1,5 +1,6 @@
 # IANA Language Tags for Python #
 
+[![Pypi package](https://badge.fury.io/py/language_tags.png)](http://badge.fury.io/py/language_tags)
 [![Build Status](https://travis-ci.org/OnroerendErfgoed/language-tags.png?branch=master)](https://travis-ci.org/OnroerendErfgoed/language-tags)
 [![Coverage Status](https://coveralls.io/repos/OnroerendErfgoed/language-tags/badge.png)](https://coveralls.io/r/OnroerendErfgoed/language-tags)
 [![Documentation Status](https://readthedocs.org/projects/language-tags/badge/?version=latest)](https://readthedocs.org/projects/language-tags/?badge=latest)
