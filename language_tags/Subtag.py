@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import json
 import os
+import six
 
 parent_dir = os.path.dirname(__file__)
 index = json.load(open(os.path.join(parent_dir, "data/json/index.json")))
@@ -50,6 +51,15 @@ class Subtag:
             "record": record,
             "type": type
         }
+
+
+    if six.PY2:
+        def __str__(self):
+            data = json.dumps(self.data, ensure_ascii=False)
+            return data.encode('utf-8') if not isinstance(data, str) else data
+    else:
+        def __str__(self):
+            return json.dumps(self.data, ensure_ascii=False)
 
     @property
     def type(self):

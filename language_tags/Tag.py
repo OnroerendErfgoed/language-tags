@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import json
+import six
 from language_tags.Subtag import Subtag
 import os
 
@@ -40,6 +41,14 @@ class Tag:
         self.ERR_SUPPRESS_SCRIPT = 10
         self.ERR_SUBTAG_DEPRECATED = 11
         self.ERR_EXTRA_LANGUAGE = 12
+
+    if six.PY2:
+        def __str__(self):
+            data = json.dumps(self.data, ensure_ascii=False)
+            return data.encode('utf-8') if not isinstance(data, str) else data
+    else:
+        def __str__(self):
+            return json.dumps(self.data, ensure_ascii=False)
 
     @property
     def preferred(self):

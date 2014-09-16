@@ -12,6 +12,13 @@ class TestTag(unittest.TestCase):
         self.assertIn(Tag("zh-cmn-Hant").type, 'redundant')
         self.assertIn(Tag("mt").type, 'tag')
 
+    def test_print(self):
+        self.assertIn('zh-wuu', Tag('zh-wuu').__str__())
+        self.assertIn('redundant', Tag('zh-wuu').__str__())
+        # test encoding
+        self.assertIn('é', Tag('é').__str__())
+        print(Tag('é'))
+
     def test_subtags_correct_type(self):
         tag = Tag('en')
         subtags = tag.subtags

@@ -14,11 +14,11 @@ packages = [
     'language_tags',
 ]
 
-requires = []
+requires = ['six']
 
 setup(
     name='language_tags',
-    version='0.1.0',
+    version='0.1.1',
     url='https://github.com/OnroerendErfgoed/language-tags',
     license='MIT',
     author='Flanders Heritage Agency',
