@@ -53,7 +53,7 @@ Get the language subtag of a tag:
 
 .. code-block:: python
 
-    > tags.tag('nl-BE').language;
+    > tags.tag('nl-BE').language
     ['nl']
 
 For the complete api documentation see next chapter.
