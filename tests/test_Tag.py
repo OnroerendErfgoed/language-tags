@@ -76,6 +76,16 @@ class TestTag(unittest.TestCase):
         subtags = tag.subtags
         self.assertEqual(subtags, [])
 
+
+    def test_language_subtags(self):
+        self.assertEqual(Tag('nl-BE').language, ['nl'])
+
+    def test_region_subtags(self):
+        self.assertEqual(Tag('nl-BE').region, ['BE'])
+
+    def test_script_subtags(self):
+        self.assertEqual(Tag('en-mt-arab').script, ['Arab'])
+
     def test_errors_deprecated_grandfathered(self):
         # Grandfathered and deprecated, therefore invalid.
         tag = Tag('art-lojban')

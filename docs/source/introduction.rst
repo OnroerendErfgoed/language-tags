@@ -32,22 +32,28 @@ Lookup descriptions of tags:
 .. code-block:: python
 
     > tags.description('nl-BE');
-    [u'Dutch', u'Flemish', u'Belgium']
+    ['Dutch', 'Flemish', 'Belgium']
 
 Lookup descriptions of a language subtag:
 
 .. code-block:: python
 
     > tags.language('nl').description;
-    [u'Dutch', u'Flemish']
-
+    ['Dutch', 'Flemish']
 
 Lookup tags by description:
 
 .. code-block:: python
 
     > language_subtags = tags.search('Flemish')
-    > print language_subtags[0].format
-    nl
+    > print(language_subtags[0].format)
+    'nl'
+
+Get the language subtag of a tag:
+
+.. code-block:: python
+
+    > tags.tags('nl-BE').language;
+    ['nl']
 
 For the complete api documentation see next chapter.

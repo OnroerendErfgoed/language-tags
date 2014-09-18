@@ -209,6 +209,36 @@ class Tag:
         return subtags
 
     @property
+    def language(self):
+        """
+        Get the language subtag strings of the tag.
+
+        :return: list of subtag strings that are part of the tag.
+            The return list can be empty.
+        """
+        return [subtag.format for subtag in self.subtags if subtag.type == 'language']
+
+    @property
+    def region(self):
+        """
+        Get the region subtag strings objects of the tag.
+
+        :return: list of region subtag strings objects that are part of the tag.
+            The return list can be empty.
+        """
+        return [subtag.format for subtag in self.subtags if subtag.type == 'region']
+
+    @property
+    def script(self):
+        """
+        Get the script subtag strings of the tag.
+
+        :return: list of script subtag strings objects that are part of the tag.
+            The return list can be empty.
+        """
+        return [subtag.format for subtag in self.subtags if subtag.type == 'script']
+
+    @property
     def valid(self):
         """
         Checks whether the tag is valid.
