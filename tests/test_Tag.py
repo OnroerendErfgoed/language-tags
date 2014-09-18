@@ -90,7 +90,7 @@ class TestTag(unittest.TestCase):
         self.assertIsNone(Tag('en-mt').script)
 
     def test_errors_deprecated_grandfathered(self):
-        # Grandfathered and deprecated, therefore invalid.llx
+        # Grandfathered and deprecated, therefore invalid.
         tag = Tag('art-lojban')
         self.assertEqual(tag.type, 'grandfathered')
         self.assertIsNotNone(tag.deprecated)
