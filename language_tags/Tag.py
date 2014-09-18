@@ -211,32 +211,41 @@ class Tag:
     @property
     def language(self):
         """
-        Get the language subtag strings of the tag.
+        Get the language :class:`language_tags.Subtag.Subtag` of the tag.
 
-        :return: list of language subtag strings that are part of the tag.
-            The return list can be empty.
+        :return: language :class:`language_tags.Subtag.Subtag` that is part of the tag.
+            The return can be None.
         """
-        return [subtag.format for subtag in self.subtags if subtag.type == 'language']
+
+        language_item = [subtag for subtag in self.subtags if subtag.type == 'language']
+
+        return language_item[0] if len(language_item) > 0 else None
 
     @property
     def region(self):
         """
-        Get the region subtag strings objects of the tag.
+        Get the region :class:`language_tags.Subtag.Subtag` of the tag.
 
-        :return: list of region subtag strings objects that are part of the tag.
-            The return list can be empty.
+        :return: region :class:`language_tags.Subtag.Subtag` that is part of the tag.
+            The return can be None.
         """
-        return [subtag.format for subtag in self.subtags if subtag.type == 'region']
+
+        region_item = [subtag for subtag in self.subtags if subtag.type == 'region']
+
+        return region_item[0] if len(region_item) > 0 else None
+
 
     @property
     def script(self):
         """
-        Get the script subtag strings of the tag.
+        Get the script :class:`language_tags.Subtag.Subtag` of the tag.
 
-        :return: list of script subtag strings objects that are part of the tag.
-            The return list can be empty.
+        :return: script :class:`language_tags.Subtag.Subtag` that is part of the tag.
+            The return can be None.
         """
-        return [subtag.format for subtag in self.subtags if subtag.type == 'script']
+        script_item = [subtag for subtag in self.subtags if subtag.type == 'script']
+
+        return script_item[0] if len (script_item) > 0 else None
 
     @property
     def valid(self):

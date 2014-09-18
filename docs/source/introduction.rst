@@ -54,6 +54,6 @@ Get the language subtag of a tag:
 .. code-block:: python
 
     > tags.tag('nl-BE').language
-    ['nl']
+    '{"subtag": "nl", "record": {"Subtag": "nl", "Suppress-Script": "Latn", "Added": "2005-10-16", "Type": "language", "Description": ["Dutch", "Flemish"]}, "type": "language"}'
 
 For the complete api documentation see next chapter.

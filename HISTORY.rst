@@ -1,19 +1,33 @@
-        0.1.1
-        _____
+0.2.0
+_____
 
-        - Added string and Unicode functions to make it easy to print Tags and Subtags.
+- Adjust language, region and script properties of Tag. The properties will return :class:`language_tags.Subtag.Subtag`
+  instead of a list of string subtags
 
-            .. code-block:: python
+    .. code-block:: python
 
-                > print(tags.tag('nl-BE'))
-                {"tag": "nl-be"}
+        > print(tags.tag('nl-BE').language)
+        '{"subtag": "nl", "record": {"Subtag": "nl", "Suppress-Script": "Latn", "Added": "2005-10-16", "Type": "language", "Description": ["Dutch", "Flemish"]}, "type": "language"}'
+        > print(tags.tag('nl-BE').region)
+        '{"subtag": "be", "record": {"Subtag": "BE", "Added": "2005-10-16", "Type": "region", "Description": ["Belgium"]}, "type": "region"}'
+        > print(tags.tag('en-mt-arab').script)
+        '{"subtag": "arab", "record": {"Subtag": "Arab", "Added": "2005-10-16", "Type": "script", "Description": ["Arabic"]}, "type": "script"}'
+0.1.1
+_____
 
-        - Added functions to easily select either the language, region or script subtags strings of a Tag.
+- Added string and Unicode functions to make it easy to print Tags and Subtags.
 
-            .. code-block:: python
+    .. code-block:: python
 
-                > tags.tag('nl-BE').language
-                ['nl']
+        > print(tags.tag('nl-BE'))
+        '{"tag": "nl-be"}'
+
+- Added functions to easily select either the language, region or script subtags strings of a Tag.
+
+    .. code-block:: python
+
+        > print(tags.tag('nl-BE').language)
+        ['nl']
 
 0.1.0
 _____
