@@ -213,7 +213,7 @@ class Tag:
         """
         Get the language subtag strings of the tag.
 
-        :return: list of subtag strings that are part of the tag.
+        :return: list of language subtag strings that are part of the tag.
             The return list can be empty.
         """
         return [subtag.format for subtag in self.subtags if subtag.type == 'language']
