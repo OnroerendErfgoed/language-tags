@@ -1,3 +1,18 @@
+0.3.0
+_____
+- Upgrade to https://github.com/mattcg/language-subtag-registry/releases/tag/v0.3.6
+- Simplify output of __str__ functions. The previous json dump is assigned to the repr function.
+
+    .. code-block:: python
+
+        nlbe = tags.tags('nl-Latn-BE')
+        > print(nlbe)
+        'nl-Latn-BE'
+        > print(nlbe.language)
+        'nl'
+        > print(nlbe.script)
+        'Latn'
+
 0.2.0
 _____
 
