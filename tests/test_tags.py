@@ -14,6 +14,11 @@ class TestSubtag(unittest.TestCase):
         self.assertIsNotNone(tag)
         self.assertEqual(tag.format, 'en-GB')
 
+    def test_undetermined(self):
+        tag = tags.tag('und')
+        self.assertIsNotNone(tag)
+        self.assertEqual(tag.format, 'und')
+
     def test_checks(self):
         self.assertTrue(tags.check('en'))
 
