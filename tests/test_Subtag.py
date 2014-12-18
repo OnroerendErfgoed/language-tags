@@ -9,10 +9,10 @@ class TestSubtag(unittest.TestCase):
         self.assertEqual(Subtag('zh', 'language').type, 'language')
         self.assertEqual(Subtag('IQ', 'region').type, 'region')
 
-    def test_print(self):
-        print(Subtag('aae', 'language'))
-        self.assertIn('aae', Subtag('aae', 'language').__str__())
-        self.assertIn('Arbëreshë Albanian', Subtag('aae', 'language').__str__())
+    def test_repr(self):
+        print(repr(Subtag('aae', 'language')))
+        self.assertIn('aae', repr(Subtag('aae', 'language')))
+        self.assertIn('Arbëreshë Albanian', repr(Subtag('aae', 'language')))
 
     def test_description(self):
         self.assertEqual(Subtag('IQ', 'region').description, ['Iraq'])

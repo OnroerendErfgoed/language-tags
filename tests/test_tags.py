@@ -105,3 +105,12 @@ class TestSubtag(unittest.TestCase):
         self.assertEqual(0, len(description))
         description = tags.description('vls')
         self.assertIn('Vlaams', description)
+
+    def test_print(self):
+        nlbe = tags.tag('nl-Latn-BE')
+        print(nlbe)
+        self.assertEqual(nlbe.__str__(), 'nl-Latn-BE')
+        print(nlbe.language)
+        self.assertEqual(nlbe.language.__str__(), 'nl')
+        print(nlbe.script)
+        self.assertEqual(nlbe.script.__str__(), 'Latn')

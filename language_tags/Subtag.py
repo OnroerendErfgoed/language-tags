@@ -52,13 +52,15 @@ class Subtag:
             "type": type
         }
 
+    def __str__(self):
+        return self.format
 
     if six.PY2:
-        def __str__(self):
+        def __repr__(self):
             data = json.dumps(self.data, ensure_ascii=False)
             return data.encode('utf-8') if not isinstance(data, str) else data
     else:
-        def __str__(self):
+        def __repr__(self):
             return json.dumps(self.data, ensure_ascii=False)
 
     @property

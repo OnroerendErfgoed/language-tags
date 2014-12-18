@@ -42,12 +42,15 @@ class Tag:
         self.ERR_SUBTAG_DEPRECATED = 11
         self.ERR_EXTRA_LANGUAGE = 12
 
+    def __str__(self):
+        return self.format
+
     if six.PY2:
-        def __str__(self):
+        def __repr__(self):
             data = json.dumps(self.data, ensure_ascii=False)
             return data.encode('utf-8') if not isinstance(data, str) else data
     else:
-        def __str__(self):
+        def __repr__(self):
             return json.dumps(self.data, ensure_ascii=False)
 
     @property
@@ -245,7 +248,7 @@ class Tag:
         """
         script_item = [subtag for subtag in self.subtags if subtag.type == 'script']
 
-        return script_item[0] if len (script_item) > 0 else None
+        return script_item[0] if len(script_item) > 0 else None
 
     @property
     def valid(self):
