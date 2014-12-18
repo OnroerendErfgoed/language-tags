@@ -31,14 +31,14 @@ Lookup descriptions of tags:
 
 .. code-block:: python
 
-    > tags.description('nl-BE');
+    > print(tags.description('nl-BE'));
     ['Dutch', 'Flemish', 'Belgium']
 
 Lookup descriptions of a language subtag:
 
 .. code-block:: python
 
-    > tags.language('nl').description;
+    > print(tags.language('nl').description);
     ['Dutch', 'Flemish']
 
 Lookup tags by description:
@@ -46,14 +46,14 @@ Lookup tags by description:
 .. code-block:: python
 
     > language_subtags = tags.search('Flemish')
-    > print(language_subtags[0].format)
+    > print(language_subtags[0])
     'nl'
 
 Get the language subtag of a tag:
 
 .. code-block:: python
 
-    > tags.tag('nl-BE').language
+    > print(repr(tags.tag('nl-BE').language))
     '{"subtag": "nl", "record": {"Subtag": "nl", "Suppress-Script": "Latn", "Added": "2005-10-16", "Type": "language", "Description": ["Dutch", "Flemish"]}, "type": "language"}'
 
 For the complete api documentation see next chapter.
