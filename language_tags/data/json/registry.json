@@ -64071,7 +64071,8 @@
 		"Type": "language",
 		"Subtag": "yue",
 		"Description": [
-			"Yue Chinese"
+			"Yue Chinese",
+			"Cantonese"
 		],
 		"Added": "2009-07-29",
 		"Macrolanguage": "zh"
@@ -68714,7 +68715,8 @@
 		"Type": "extlang",
 		"Subtag": "yue",
 		"Description": [
-			"Yue Chinese"
+			"Yue Chinese",
+			"Cantonese"
 		],
 		"Added": "2009-07-29",
 		"Preferred-Value": "yue",
@@ -73062,6 +73064,21 @@
 		"Added": "2008-10-14",
 		"Prefix": [
 			"kw"
+		]
+	},
+	{
+		"Type": "variant",
+		"Subtag": "kociewie",
+		"Description": [
+			"The Kociewie dialect of Polish"
+		],
+		"Added": "2014-11-27",
+		"Prefix": [
+			"pl"
+		],
+		"Comments": [
+			"The dialect of Kociewie is spoken in the region around",
+			"Starogard Gdański, Tczew and Świecie in northern Poland."
 		]
 	},
 	{
