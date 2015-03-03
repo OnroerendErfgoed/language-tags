@@ -1,3 +1,7 @@
+0.3.1
+_____
+- Upgrade to https://github.com/mattcg/language-subtag-registry/releases/tag/v0.3.8
+
 0.3.0
 _____
 - Upgrade to https://github.com/mattcg/language-subtag-registry/releases/tag/v0.3.6
