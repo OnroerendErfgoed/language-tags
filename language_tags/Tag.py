@@ -1,12 +1,15 @@
 # -*- coding: utf-8 -*-
 import json
 import six
-from language_tags.Subtag import Subtag
 import os
 
+from io import open
+
+from language_tags.Subtag import Subtag
+
 parent_dir = os.path.dirname(__file__)
-index = json.load(open(os.path.join(parent_dir, "data/json/index.json")))
-registry = json.load(open(os.path.join(parent_dir, "data/json/registry.json")))
+index = json.load(open(os.path.join(parent_dir, "data/json/index.json"), encoding='utf-8'))
+registry = json.load(open(os.path.join(parent_dir, "data/json/registry.json"), encoding='utf-8'))
 
 
 class Tag:

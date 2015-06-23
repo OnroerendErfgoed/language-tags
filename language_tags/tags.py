@@ -2,13 +2,15 @@
 import os
 import json
 
+from io import open
+
 from language_tags.Subtag import Subtag
 from language_tags.Tag import Tag
 
 
 parent_dir = os.path.dirname(__file__)
-index = json.load(open(os.path.join(parent_dir, "data/json/index.json")))
-registry = json.load(open(os.path.join(parent_dir, "data/json/registry.json")))
+index = json.load(open(os.path.join(parent_dir, "data/json/index.json"), encoding='utf-8'))
+registry = json.load(open(os.path.join(parent_dir, "data/json/registry.json"), encoding='utf-8'))
 
 class tags():
 
