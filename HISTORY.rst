@@ -1,3 +1,9 @@
+0.3.2
+_____
+- Upgrade to https://github.com/mattcg/language-subtag-registry/releases/tag/v0.3.11
+- Added wheel config
+- Fixed bug under windows: opening data files using utf-8 encoding.
+
 0.3.1
 _____
 - Upgrade to https://github.com/mattcg/language-subtag-registry/releases/tag/v0.3.8
