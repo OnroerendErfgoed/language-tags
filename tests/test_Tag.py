@@ -293,7 +293,7 @@ class TestTag(unittest.TestCase):
 
     def test_valid_tag_grandfathered(self):
         # Grandfathered but not deprecated, therefore valid.
-        tag = Tag('en-GB-oed')
+        tag = Tag('i-default')
         self.assertEqual(tag.type, 'grandfathered')
         self.assertIsNone(tag.deprecated)
         self.assertTrue(tag.valid)
@@ -393,7 +393,7 @@ class TestTag(unittest.TestCase):
         self.assertEqual(tag.deprecated, '2009-07-29')
 
         # Grandfathered but not deprecated.
-        tag = Tag('en-GB-oed')
+        tag = Tag('i-default')
         self.assertEqual(tag.type, 'grandfathered')
         self.assertIsNone(tag.deprecated)
 
@@ -417,17 +417,17 @@ class TestTag(unittest.TestCase):
         self.assertEqual(tag.added, '1999-12-18')
 
         # Grandfathered but not deprecated.
-        tag = Tag('en-GB-oed')
+        tag = Tag('i-default')
         self.assertEqual(tag.type, 'grandfathered')
         self.assertIsNone(tag.deprecated)
-        self.assertEqual(tag.added, '2003-07-09')
+        self.assertEqual(tag.added, '1998-03-10')
 
         self.assertIsNone(Tag('en').added)
 
     def test_description(self):
         tag = Tag('en-GB-oed')
         self.assertEqual(tag.type, 'grandfathered')
-        self.assertIsNone(tag.deprecated)
+        self.assertEqual('2015-04-17', tag.deprecated)
         self.assertEqual(tag.descriptions, ['English, Oxford English Dictionary spelling'])
 
         self.assertEqual(Tag('en').descriptions, [])
