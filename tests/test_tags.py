@@ -114,3 +114,21 @@ class TestSubtag(unittest.TestCase):
         self.assertEqual(nlbe.language.__str__(), 'nl')
         print(nlbe.script)
         self.assertEqual(nlbe.script.__str__(), 'Latn')
+
+    def test_redundant_subtags(self):
+        tag = tags.tag('es-419')
+        self.assertListEqual(tag.region.description, ['Latin America and the Caribbean'])
+        self.assertListEqual(tag.language.description, ['Spanish', 'Castilian'])
+
+        tag = tags.tag('sgn-NL')
+        self.assertEqual(tag.preferred.format, 'dse')
+        self.assertEqual(tag.subtags[0].data['subtag'], 'dse')
+        self.assertListEqual(tag.language.description, ['Dutch Sign Language'])
+
+    def test_grandfathered_subtags(self):
+        tag = tags.tag('i-klingon')
+        self.assertEqual(tag.preferred.format, 'tlh')
+        self.assertListEqual(tag.language.description, ['Klingon', 'tlhIngan-Hol'])
+
+        tag = tags.tag('i-default')
+        self.assertEqual(len(tag.subtags), 0)
