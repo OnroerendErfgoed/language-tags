@@ -4,6 +4,7 @@ import re
 
 from language_tags import tags
 
+
 class TestSubtag(unittest.TestCase):
 
     def test_get_tag(self):
@@ -121,14 +122,10 @@ class TestSubtag(unittest.TestCase):
         self.assertListEqual(tag.language.description, ['Spanish', 'Castilian'])
 
         tag = tags.tag('sgn-NL')
-        self.assertEqual(tag.preferred.format, 'dse')
-        self.assertEqual(tag.subtags[0].data['subtag'], 'dse')
-        self.assertListEqual(tag.language.description, ['Dutch Sign Language'])
+        self.assertListEqual(tag.region.description, ['Netherlands'])
+        self.assertListEqual(tag.language.description, ['Sign languages'])
 
     def test_grandfathered_subtags(self):
         tag = tags.tag('i-klingon')
-        self.assertEqual(tag.preferred.format, 'tlh')
-        self.assertListEqual(tag.language.description, ['Klingon', 'tlhIngan-Hol'])
-
-        tag = tags.tag('i-default')
+        self.assertIsNone(tag.language)
         self.assertEqual(len(tag.subtags), 0)

@@ -157,13 +157,9 @@ class Tag:
         data = self.data
         subtags = []
 
-        # If the tag is redundant or grandfathered use preferred value if present
-        # otherwise when grandfathered return no subtags and continue when redundant
-        if 'record' in data:
-            if 'Preferred-Value' in self.data['record']:
-                data['tag'] = data['record']['Preferred-Value']
-            elif self.data['record']['Type'] == 'grandfathered':
-                return subtags
+        # if tag is grandfathered return no subtags
+        if 'record' in data and self.data['record']['Type'] == 'grandfathered':
+            return subtags
 
         codes = data['tag'].split('-')
         # Try and find the language tag.

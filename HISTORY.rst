@@ -1,3 +1,7 @@
+0.4.0
+-----
+- Allow parsing a redundant tag into subtags.
+
 0.3.2
 _____
 - Upgrade to https://github.com/mattcg/language-subtag-registry/releases/tag/v0.3.11
