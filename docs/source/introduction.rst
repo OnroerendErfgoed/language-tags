@@ -56,4 +56,39 @@ Get the language subtag of a tag:
     > print(repr(tags.tag('nl-BE').language))
     '{"subtag": "nl", "record": {"Subtag": "nl", "Suppress-Script": "Latn", "Added": "2005-10-16", "Type": "language", "Description": ["Dutch", "Flemish"]}, "type": "language"}'
 
+A redundant tag is a grandfathered registration whose individual subtags appear with the same semantic meaning in the registry [1]_.
+A redundant tag has descriptions and can have a preferred tag.
+
+.. code-block:: python
+
+    > redundant_tag = tags.tag('es-419')
+    > print(redundant_tag.descriptions)
+    ['Latin American Spanish']
+    > print(grandfathered_tag.valid)
+    True
+    > print(redundant_tag.region.description)
+    ['Latin America and the Caribbean']
+    > print(redundant_tag.region.language)
+    ['Spanish', 'Castilian']
+
+The remainder of the previously registered tags are "grandfathered" [1]_. Grandfathered tags cannot be parsed into subtags.
+A grandfathered tag has descriptions. Most grandfathered tags have valid perferred tags.
+
+.. code-block:: python
+
+    > grandfathered_tag = tags.tag('i-klingon')
+    > print(grandfathered_tag.descriptions)
+    ['Klingon']
+    > print(grandfathered_tag.valid)
+    False
+    > print(grandfathered_tag.subtags)
+    []
+    > print(grandfathered_tag.preferred)
+    tlh
+    > preferred_tag = grandfathered_tag.preferred
+    > print(preferred_tag.language.description)
+    ['Klingon', 'tlhIngan-Hol']
+
 For the complete api documentation see next chapter.
+
+.. [1] `RFC 5646 <https://tools.ietf.org/html/bcp47#section-2.2.8>`_
