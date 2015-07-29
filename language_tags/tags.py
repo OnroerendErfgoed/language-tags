@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 import json
+import six
 
 from io import open
 
@@ -108,11 +109,13 @@ class tags():
                 return description.search(', '.join(record['Description'])) is not None
 
         records = filter(lambda r: False if ('Subtag' not in r and not all) else test(r), registry)
+        if six.PY3:
+            records = list(records)
         # Sort by matched description string length. This is a quick way to push precise matches towards the top.
         results = sorted(records, key=lambda r: min([abs(len(r_description) - len(description))
                                                     for r_description in r['Description']])) \
             if isinstance(description, str) else records
-        return map(lambda r: Subtag(r['Subtag'], r['Type']) if 'Subtag' in r else Tag(['Tag']), results)
+        return [Subtag(r['Subtag'], r['Type']) if 'Subtag' in r else Tag(['Tag']) for r in results]
 
     @staticmethod
     def description(tag):
