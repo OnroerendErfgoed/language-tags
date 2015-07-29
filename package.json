@@ -1,0 +1,33 @@
+{
+	"name": "language-tags",
+	"version": "0.4.0",
+	"description": "Work with IANA language tags.",
+	"homepage": "https://github.com/OnroerendErfgoed/language-tags",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/OnroerendErfgoed/language-tags.git"
+	},
+	"contributors": [
+		{
+			"name": "Flanders Heritage Agency",
+			"email": "ict@onroerenderfgoed.be"
+		}
+	],
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://mattcg.mit-license.org/"
+		}
+	],
+	"keywords": [
+		"iana",
+		"bcp47",
+		"subtags",
+		"rfc5646",
+		"m17n",
+		"multilingualization"
+	],
+	"dependencies": {
+		"language-subtag-registry": "~0.3.11"
+	}
+}
