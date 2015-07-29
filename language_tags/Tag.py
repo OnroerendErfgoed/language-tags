@@ -157,8 +157,8 @@ class Tag:
         data = self.data
         subtags = []
 
-        # No subtags if the tag is grandfathered or redundant.
-        if 'record' in data:
+        # if tag is grandfathered return no subtags
+        if 'record' in data and self.data['record']['Type'] == 'grandfathered':
             return subtags
 
         codes = data['tag'].split('-')

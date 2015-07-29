@@ -4,6 +4,7 @@ import re
 
 from language_tags import tags
 
+
 class TestSubtag(unittest.TestCase):
 
     def test_get_tag(self):
@@ -114,3 +115,17 @@ class TestSubtag(unittest.TestCase):
         self.assertEqual(nlbe.language.__str__(), 'nl')
         print(nlbe.script)
         self.assertEqual(nlbe.script.__str__(), 'Latn')
+
+    def test_redundant_subtags(self):
+        tag = tags.tag('es-419')
+        self.assertListEqual(tag.region.description, ['Latin America and the Caribbean'])
+        self.assertListEqual(tag.language.description, ['Spanish', 'Castilian'])
+
+        tag = tags.tag('sgn-NL')
+        self.assertListEqual(tag.region.description, ['Netherlands'])
+        self.assertListEqual(tag.language.description, ['Sign languages'])
+
+    def test_grandfathered_subtags(self):
+        tag = tags.tag('i-klingon')
+        self.assertIsNone(tag.language)
+        self.assertEqual(len(tag.subtags), 0)

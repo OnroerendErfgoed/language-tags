@@ -74,7 +74,7 @@ class TestTag(unittest.TestCase):
         tag = Tag('az-Arab')
         self.assertEqual(tag.type, 'redundant')
         subtags = tag.subtags
-        self.assertEqual(subtags, [])
+        self.assertGreater(len(subtags), 0)
 
 
     def test_language_subtags(self):
