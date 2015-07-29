@@ -57,6 +57,12 @@ class TestSubtag(unittest.TestCase):
         subtags = tags.search('Lojban', all=True)
         self.assertEqual(len(subtags), 2)
 
+    def test_search_exact_match(self):
+        subtags = tags.search('Dari')
+        self.assertGreater(len(subtags), 0)
+        self.assertEqual(subtags[0].type, 'language')
+        self.assertEqual(subtags[0].format, 'prs')
+
     def test_search_regexp(self):
         subtags = tags.search(re.compile('\d{4}'))
         self.assertGreater(len(subtags), 0)

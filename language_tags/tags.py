@@ -95,30 +95,24 @@ class tags():
         :return: list of :class:`language_tags.Subtag.Subtag` objects each including the description.
             The return list can be empty.
         """
-        results = []
 
-        def append(record):
-            if 'Subtag' in record:
-                results.append(Subtag(record['Subtag'], record['Type']))
-            elif all:
-                results.append(Tag(record['Tag']))
-
+        # If the input query is all lowercase, make a case-insensitive match.
         if isinstance(description, str):
-            description = description.lower()
+            list_to_string = lambda l: ', '.join(l).lower() if description.lower() == description else ', '.join(l)
 
             def test(record):
-                if description in ', '.join(record['Description']).lower():
-                    append(record)
+                return description in list_to_string(record['Description'])
 
         elif hasattr(description.search, '__call__'):
             def test(record):
-                if description.search(', '.join(record['Description'])) is not None:
-                    append(record)
+                return description.search(', '.join(record['Description'])) is not None
 
-        for registry_item in registry:
-            test(registry_item)
-
-        return results
+        records = filter(lambda r: False if ('Subtag' not in r and not all) else test(r), registry)
+        # Sort by matched description string length. This is a quick way to push precise matches towards the top.
+        results = sorted(records, key=lambda r: min([abs(len(r_description) - len(description))
+                                                    for r_description in r['Description']])) \
+            if isinstance(description, str) else records
+        return map(lambda r: Subtag(r['Subtag'], r['Type']) if 'Subtag' in r else Tag(['Tag']), results)
 
     @staticmethod
     def description(tag):
