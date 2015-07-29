@@ -9,8 +9,9 @@ from language_tags.Tag import Tag
 
 
 parent_dir = os.path.dirname(__file__)
-index = json.load(open(os.path.join(parent_dir, "data/json/index.json"), encoding='utf-8'))
-registry = json.load(open(os.path.join(parent_dir, "data/json/registry.json"), encoding='utf-8'))
+data_dir = '../node_modules/language-subtag-registry/data/json/'
+index = json.load(open(os.path.join(parent_dir, data_dir + "index.json"), encoding='utf-8'))
+registry = json.load(open(os.path.join(parent_dir, data_dir + "registry.json"), encoding='utf-8'))
 
 class tags():
 
@@ -147,7 +148,7 @@ class tags():
         results = []
 
         macrolanguage = macrolanguage.lower()
-        macrolanguage_data = json.load(open(os.path.join(parent_dir, "data/json/macrolanguage.json")))
+        macrolanguage_data = json.load(open(os.path.join(parent_dir, data_dir + "macrolanguage.json")))
         if macrolanguage not in macrolanguage_data:
             raise Exception('\'' + macrolanguage + '\' is not a macrolanguage.')
         for registry_item in registry:
@@ -201,5 +202,5 @@ class tags():
 
         :return: date as string (for example: '2014-03-27').
         """
-        meta = json.load(open(os.path.join(parent_dir, "data/json/meta.json")))
+        meta = json.load(open(os.path.join(parent_dir, data_dir + "meta.json")))
         return meta['File-Date']
