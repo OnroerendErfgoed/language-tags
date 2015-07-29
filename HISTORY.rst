@@ -1,6 +1,8 @@
 0.4.0
 -----
 - Allow parsing a redundant tag into subtags.
+- Added package.json file for easy update of the language subtag registry data using `npm <https://docs.npmjs.com/>`_
+  (:code:`npm install` or :code:`npm update`)
 
 0.3.2
 _____
