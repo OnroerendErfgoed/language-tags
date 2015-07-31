@@ -64,7 +64,7 @@ A redundant tag has descriptions and can have a preferred tag.
     > redundant_tag = tags.tag('es-419')
     > print(redundant_tag.descriptions)
     ['Latin American Spanish']
-    > print(grandfathered_tag.valid)
+    > print(redundant_tag.valid)
     True
     > print(redundant_tag.region.description)
     ['Latin America and the Caribbean']
