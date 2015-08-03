@@ -3,6 +3,8 @@
 - Allow parsing a redundant tag into subtags.
 - Added package.json file for easy update of the language subtag registry data using `npm <https://docs.npmjs.com/>`_
   (:code:`npm install` or :code:`npm update`)
+- Improvement of the :code:`language-tags.tags.search` function: rank equal description at top.
+  See `mattcg/language-tags#4 <https://github.com/mattcg/language-tags/issues/4>`_
 
 0.3.2
 _____
