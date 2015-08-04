@@ -1,3 +1,10 @@
+0.4.1
+-----
+- Included the data folder again in the project package.
+- Added bash script (`update_data_files.sh`) to download the
+  `language-subtag-registry <https://github.com/mattcg/language-subtag-registry/>`_
+  and move this data in the data folder of the project.
+
 0.4.0
 -----
 - Allow parsing a redundant tag into subtags.

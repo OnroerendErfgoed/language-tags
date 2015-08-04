@@ -6,9 +6,9 @@ import six
 from io import open
 
 parent_dir = os.path.dirname(__file__)
-data_dir = '../node_modules/language-subtag-registry/data/json/'
-index = json.load(open(os.path.join(parent_dir, data_dir + "index.json"), encoding='utf-8'))
-registry = json.load(open(os.path.join(parent_dir, data_dir + "registry.json"), encoding='utf-8'))
+data_dir = 'data/json/'
+index = json.load(open(os.path.join(parent_dir, data_dir, "index.json"), encoding='utf-8'))
+registry = json.load(open(os.path.join(parent_dir, data_dir, "registry.json"), encoding='utf-8'))
 
 
 class Subtag:
