@@ -1,3 +1,8 @@
+0.4.2
+-----
+
+- Official python 3.5 compatibility
+
 0.4.1
 -----
 - Included the data folder again in the project package.
