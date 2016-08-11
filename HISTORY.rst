@@ -2,6 +2,7 @@
 -----
 
 - Official python 3.5 compatibility
+- Upgrade to https://github.com/mattcg/language-subtag-registry/releases/tag/v0.3.15
 
 0.4.1
 -----
