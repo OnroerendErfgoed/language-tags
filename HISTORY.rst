@@ -1,3 +1,7 @@
+0.4.3
+-----
+- Upgrade to https://github.com/mattcg/language-subtag-registry/releases/tag/v0.3.18
+
 0.4.2
 -----
 

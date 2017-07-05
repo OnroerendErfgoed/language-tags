@@ -1,6 +1,6 @@
 {
 	"name": "language-tags",
-	"version": "0.4.2",
+	"version": "0.4.3",
 	"description": "Work with IANA language tags.",
 	"homepage": "https://github.com/OnroerendErfgoed/language-tags",
 	"repository": {
