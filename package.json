@@ -13,12 +13,7 @@
 			"email": "ict@onroerenderfgoed.be"
 		}
 	],
-	"licenses": [
-		{
-			"type": "MIT",
-			"url": "http://mattcg.mit-license.org/"
-		}
-	],
+	"license": "MIT",
 	"keywords": [
 		"iana",
 		"bcp47",
