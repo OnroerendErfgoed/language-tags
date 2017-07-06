@@ -1,6 +1,6 @@
 {
 	"name": "language-tags",
-	"version": "0.4.2",
+	"version": "0.4.3",
 	"description": "Work with IANA language tags.",
 	"homepage": "https://github.com/OnroerendErfgoed/language-tags",
 	"repository": {
@@ -13,12 +13,7 @@
 			"email": "ict@onroerenderfgoed.be"
 		}
 	],
-	"licenses": [
-		{
-			"type": "MIT",
-			"url": "http://mattcg.mit-license.org/"
-		}
-	],
+	"license": "MIT",
 	"keywords": [
 		"iana",
 		"bcp47",
@@ -28,6 +23,6 @@
 		"multilingualization"
 	],
 	"dependencies": {
-		"language-subtag-registry": "~0.3.15"
+		"language-subtag-registry": "~0.3.18"
 	}
 }
