@@ -1,3 +1,8 @@
+0.4.4
+-----
+
+- Bug fix release: language tag 'aa' is detected as invalid #27
+
 0.4.3
 -----
 - Upgrade to https://github.com/mattcg/language-subtag-registry/releases/tag/v0.3.18
