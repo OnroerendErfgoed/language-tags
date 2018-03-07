@@ -176,12 +176,10 @@ class Tag:
                 continue
             types = index[code]
 
-            # Check against undefined because value could be 0.
             # Language subtags may only appear at the beginning of the tag, otherwise the subtag type is indeterminate.
             if 'language' in types and i == 0:
-                if types['language']:
-                    subtags.append(Subtag(code, 'language'))
-                    continue
+                subtags.append(Subtag(code, 'language'))
+                continue
 
             if len(code) == 2:
                 # Should be a region

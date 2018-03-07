@@ -20,11 +20,11 @@ class TestTag(unittest.TestCase):
         print(Tag('é'))
 
     def test_subtags_correct_type(self):
-        tag = Tag('en')
+        tag = Tag('aa')
         subtags = tag.subtags
         self.assertEqual(len(subtags), 1)
         self.assertEqual(subtags[0].type, 'language')
-        self.assertEqual(subtags[0].format, 'en')
+        self.assertEqual(subtags[0].format, 'aa')
 
         # Lowercase - lookup should be case insensitive.
         tag = Tag('en-mt')
