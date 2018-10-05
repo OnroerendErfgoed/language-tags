@@ -1,3 +1,8 @@
+0.4.5
+-----
+
+- Close files after opening #38
+
 0.4.4
 -----
 
