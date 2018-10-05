@@ -1,18 +1,14 @@
 # -*- coding: utf-8 -*-
-import os
-import json
 import six
-
-from io import open
 
 from language_tags.Subtag import Subtag
 from language_tags.Tag import Tag
+from language_tags import data
 
 
-parent_dir = os.path.dirname(__file__)
-data_dir = 'data/json/'
-index = json.load(open(os.path.join(parent_dir, data_dir + "index.json"), encoding='utf-8'))
-registry = json.load(open(os.path.join(parent_dir, data_dir + "registry.json"), encoding='utf-8'))
+index = data.get('index')
+registry = data.get('registry')
+
 
 class tags():
 
@@ -145,7 +141,7 @@ class tags():
         results = []
 
         macrolanguage = macrolanguage.lower()
-        macrolanguage_data = json.load(open(os.path.join(parent_dir, data_dir, "macrolanguage.json")))
+        macrolanguage_data = data.get('macrolanguage')
         if macrolanguage not in macrolanguage_data:
             raise Exception('\'' + macrolanguage + '\' is not a macrolanguage.')
         for registry_item in registry:
@@ -199,5 +195,5 @@ class tags():
 
         :return: date as string (for example: '2014-03-27').
         """
-        meta = json.load(open(os.path.join(parent_dir, data_dir, "meta.json")))
+        meta = data.get('meta')
         return meta['File-Date']
