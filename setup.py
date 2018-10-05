@@ -12,6 +12,7 @@ HISTORY = open(os.path.join(here, 'HISTORY.rst')).read()
 
 packages = [
     'language_tags',
+    'language_tags.data',
 ]
 
 requires = ['six']
