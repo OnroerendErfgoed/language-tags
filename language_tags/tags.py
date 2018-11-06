@@ -126,7 +126,8 @@ class tags():
         :return: list of string descriptions. The return list can be empty.
         """
         tag_object = Tag(tag)
-        results = tag_object.descriptions
+        results = []
+        results.extend(tag_object.descriptions)
         subtags = tag_object.subtags
         for subtag in subtags:
             results += subtag.description

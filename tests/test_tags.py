@@ -108,6 +108,7 @@ class TestSubtag(unittest.TestCase):
         self.assertIn('Belgium', description)
         description = tags.description('az-Arab')
         self.assertIn('Azerbaijani in Arabic script', description)
+        self.assertEqual(len(description), len(tags.description('az-Arab')))
         description = tags.description('123')
         self.assertEqual(0, len(description))
         description = tags.description('vls')
