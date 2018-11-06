@@ -1,3 +1,8 @@
+0.4.6
+-----
+
+- Avoid modifying tag when getting description
+
 0.4.5
 -----
 
