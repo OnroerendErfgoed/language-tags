@@ -1,3 +1,11 @@
+Changelog
+=========
+
+0.5.0
+-----
+
+- Updated dependencies and Python (Removed Python3.3 and Python3.4 support, added 3.6 and 3.7)
+
 0.4.6
 -----
 
@@ -15,16 +23,18 @@
 
 0.4.3
 -----
-- Upgrade to https://github.com/mattcg/language-subtag-registry/releases/tag/v0.3.18
+
+- Upgrade to <https://github.com/mattcg/language-subtag-registry/releases/tag/v0.3.18>
 
 0.4.2
 -----
 
 - Official python 3.5 compatibility
-- Upgrade to https://github.com/mattcg/language-subtag-registry/releases/tag/v0.3.15
+- Upgrade to <https://github.com/mattcg/language-subtag-registry/releases/tag/v0.3.15>
 
 0.4.1
 -----
+
 - Included the data folder again in the project package.
 - Added bash script (`update_data_files.sh`) to download the
   `language-subtag-registry <https://github.com/mattcg/language-subtag-registry/>`_
@@ -32,6 +42,7 @@
 
 0.4.0
 -----
+
 - Allow parsing a redundant tag into subtags.
 - Added package.json file for easy update of the language subtag registry data using `npm <https://docs.npmjs.com/>`_
   (:code:`npm install` or :code:`npm update`)
@@ -39,18 +50,21 @@
   See `mattcg/language-tags#4 <https://github.com/mattcg/language-tags/issues/4>`_
 
 0.3.2
-_____
-- Upgrade to https://github.com/mattcg/language-subtag-registry/releases/tag/v0.3.11
+-----
+
+- Upgrade to <https://github.com/mattcg/language-subtag-registry/releases/tag/v0.3.11>
 - Added wheel config
 - Fixed bug under windows: opening data files using utf-8 encoding.
 
 0.3.1
-_____
-- Upgrade to https://github.com/mattcg/language-subtag-registry/releases/tag/v0.3.8
+-----
+
+- Upgrade to <https://github.com/mattcg/language-subtag-registry/releases/tag/v0.3.8>
 
 0.3.0
-_____
-- Upgrade to https://github.com/mattcg/language-subtag-registry/releases/tag/v0.3.6
+-----
+
+- Upgrade to <https://github.com/mattcg/language-subtag-registry/releases/tag/v0.3.6>
 - Simplify output of __str__ functions. The previous json dump is assigned to the repr function.
 
     .. code-block:: python
@@ -64,9 +78,9 @@ _____
         'Latn'
 
 0.2.0
-_____
+-----
 
-- Adjust language, region and script properties of Tag. The properties will return :class:`language_tags.Subtag.Subtag`
+- Adjust language, region and script properties of Tag. The properties will return `language_tags.Subtag.Subtag`
   instead of a list of string subtags
 
     .. code-block:: python
@@ -77,8 +91,9 @@ _____
         '{"subtag": "be", "record": {"Subtag": "BE", "Added": "2005-10-16", "Type": "region", "Description": ["Belgium"]}, "type": "region"}'
         > print(tags.tag('en-mt-arab').script)
         '{"subtag": "arab", "record": {"Subtag": "Arab", "Added": "2005-10-16", "Type": "script", "Description": ["Arabic"]}, "type": "script"}'
+
 0.1.1
-_____
+-----
 
 - Added string and Unicode functions to make it easy to print Tags and Subtags.
 
@@ -95,6 +110,6 @@ _____
         ['nl']
 
 0.1.0
-_____
+-----
 
 - Initial version
