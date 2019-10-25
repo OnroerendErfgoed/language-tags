@@ -19,7 +19,7 @@ requires = ['six']
 
 setup(
     name='language_tags',
-    version='0.4.6',
+    version='1.0.0',
     url='https://github.com/OnroerendErfgoed/language-tags',
     license='MIT',
     author='Flanders Heritage Agency',
@@ -31,7 +31,6 @@ setup(
     classifiers=[
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
