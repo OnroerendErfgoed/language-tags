@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-import six
-
 from language_tags.Subtag import Subtag
 from language_tags.Tag import Tag
 from language_tags import data
@@ -105,8 +103,7 @@ class tags():
                 return description.search(', '.join(record['Description'])) is not None
 
         records = filter(lambda r: False if ('Subtag' not in r and not all) else test(r), registry)
-        if six.PY3:
-            records = list(records)
+        records = list(records)
         # Sort by matched description string length. This is a quick way to push precise matches towards the top.
         results = sorted(records, key=lambda r: min([abs(len(r_description) - len(description))
                                                     for r_description in r['Description']])) \

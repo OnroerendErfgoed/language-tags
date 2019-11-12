@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.0.0
+-----
+
+- Drop support for Python 2
+
 0.5.0
 -----
 
