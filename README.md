@@ -9,6 +9,8 @@ Based on [BCP 47](http://tools.ietf.org/html/bcp47) ([RFC 5646](http://tools.iet
 
 This project will be updated as the standards change.
 
+Language-tags 1.0.0 will only supports Python 3, for Python 2 support, please use language-tags 0.5.0.
+
 ## JSON data ##
 
 See the [language-subtag-registry](https://github.com/mattcg/language-subtag-registry) project for the underlying JSON data.
