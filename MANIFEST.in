@@ -1,2 +1,2 @@
-include *.txt *.ini *.cfg *.rst *.md *.json
+include *.txt *.ini *.cfg *.rst *.md *.json LICENSE
 recursive-include language_tags *.txt *.json
