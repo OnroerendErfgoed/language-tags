@@ -6,5 +6,5 @@ pytest==5.2.1
 pytest-cov==2.8.1
 
 # Documentation
-Sphinx==2.2.0
+Sphinx==3.5.1
 sphinx_rtd_theme==0.4.3
