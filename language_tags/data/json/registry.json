@@ -582,8 +582,7 @@
 		"Type": "language",
 		"Subtag": "ia",
 		"Description": [
-			"Interlingua (International Auxiliary Language",
-			"Association)"
+			"Interlingua (International Auxiliary Language Association)"
 		],
 		"Added": "2005-10-16"
 	},
@@ -2322,7 +2321,7 @@
 		"Type": "language",
 		"Subtag": "adb",
 		"Description": [
-			"Adabe"
+			"Atauran"
 		],
 		"Added": "2009-07-29"
 	},
@@ -4193,7 +4192,8 @@
 		"Description": [
 			"Arma"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2020-03-28"
 	},
 	{
 		"Type": "language",
@@ -5871,7 +5871,8 @@
 		"Description": [
 			"Tayabas Ayta"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2020-03-28"
 	},
 	{
 		"Type": "language",
@@ -6372,6 +6373,7 @@
 			"Babalia Creole Arabic"
 		],
 		"Added": "2009-07-29",
+		"Deprecated": "2020-03-28",
 		"Macrolanguage": "ar"
 	},
 	{
@@ -9025,7 +9027,8 @@
 		"Description": [
 			"Barbacoas"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2020-03-28"
 	},
 	{
 		"Type": "language",
@@ -9434,7 +9437,7 @@
 		"Type": "language",
 		"Subtag": "brf",
 		"Description": [
-			"Bera"
+			"Bira"
 		],
 		"Added": "2009-07-29"
 	},
@@ -11599,7 +11602,8 @@
 		"Description": [
 			"Cauca"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2020-03-28"
 	},
 	{
 		"Type": "language",
@@ -11765,7 +11769,8 @@
 		"Description": [
 			"Chamari"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2020-03-28"
 	},
 	{
 		"Type": "language",
@@ -12390,6 +12395,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "ckm",
+		"Description": [
+			"Chakavian"
+		],
+		"Added": "2020-03-28"
+	},
+	{
+		"Type": "language",
 		"Subtag": "ckn",
 		"Description": [
 			"Kaang Chin"
@@ -12777,6 +12790,16 @@
 			"Con"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "cnp",
+		"Description": [
+			"Northern Ping Chinese",
+			"Northern Pinghua"
+		],
+		"Added": "2020-03-28",
+		"Macrolanguage": "zh"
 	},
 	{
 		"Type": "language",
@@ -13474,6 +13497,16 @@
 			"Sochiapan Chinantec"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "csp",
+		"Description": [
+			"Southern Ping Chinese",
+			"Southern Pinghua"
+		],
+		"Added": "2020-03-28",
+		"Macrolanguage": "zh"
 	},
 	{
 		"Type": "language",
@@ -14673,7 +14706,8 @@
 		"Type": "language",
 		"Subtag": "dgr",
 		"Description": [
-			"Dogrib"
+			"Dogrib",
+			"Tłı̨chǫ"
 		],
 		"Added": "2005-10-16"
 	},
@@ -14699,7 +14733,8 @@
 		"Description": [
 			"Degaru"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2020-03-28"
 	},
 	{
 		"Type": "language",
@@ -15307,6 +15342,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "dmf",
+		"Description": [
+			"Medefaidrin"
+		],
+		"Added": "2020-03-28"
+	},
+	{
+		"Type": "language",
 		"Subtag": "dmg",
 		"Description": [
 			"Upper Kinabatangan"
@@ -15815,7 +15858,9 @@
 		"Description": [
 			"Dororo"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2020-03-28",
+		"Preferred-Value": "kzk"
 	},
 	{
 		"Type": "language",
@@ -16275,6 +16320,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "dwk",
+		"Description": [
+			"Dawik Kui"
+		],
+		"Added": "2020-03-28"
+	},
+	{
+		"Type": "language",
 		"Subtag": "dwl",
 		"Description": [
 			"Walo Kumbe Dogon"
@@ -16474,6 +16527,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "ebc",
+		"Description": [
+			"Beginci"
+		],
+		"Added": "2020-03-28"
+	},
+	{
+		"Type": "language",
 		"Subtag": "ebg",
 		"Description": [
 			"Ebughu"
@@ -16665,7 +16726,8 @@
 		"Description": [
 			"Eastern Karnic"
 		],
-		"Added": "2013-09-10"
+		"Added": "2013-09-10",
+		"Deprecated": "2020-03-28"
 	},
 	{
 		"Type": "language",
@@ -17677,6 +17739,14 @@
 			"Fyer"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "fif",
+		"Description": [
+			"Faifi"
+		],
+		"Added": "2020-06-08"
 	},
 	{
 		"Type": "language",
@@ -18729,7 +18799,8 @@
 		"Type": "language",
 		"Subtag": "gdh",
 		"Description": [
-			"Gadjerawang"
+			"Gadjerawang",
+			"Gajirrabeng"
 		],
 		"Added": "2009-07-29"
 	},
@@ -18869,6 +18940,14 @@
 			"Gade"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "gef",
+		"Description": [
+			"Gerai"
+		],
+		"Added": "2020-03-28"
 	},
 	{
 		"Type": "language",
@@ -19524,7 +19603,9 @@
 		"Description": [
 			"Guliguli"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2020-03-28",
+		"Preferred-Value": "kzk"
 	},
 	{
 		"Type": "language",
@@ -19672,6 +19753,15 @@
 		],
 		"Added": "2009-07-29",
 		"Scope": "collection"
+	},
+	{
+		"Type": "language",
+		"Subtag": "gmr",
+		"Description": [
+			"Mirning",
+			"Mirniny"
+		],
+		"Added": "2020-03-28"
 	},
 	{
 		"Type": "language",
@@ -20748,6 +20838,7 @@
 		"Type": "language",
 		"Subtag": "gwc",
 		"Description": [
+			"Gawri",
 			"Kalami"
 		],
 		"Added": "2009-07-29"
@@ -21847,6 +21938,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "hng",
+		"Description": [
+			"Hungu"
+		],
+		"Added": "2020-03-28"
+	},
+	{
+		"Type": "language",
 		"Subtag": "hnh",
 		"Description": [
 			"ǁAni"
@@ -22287,7 +22386,8 @@
 		"Type": "language",
 		"Subtag": "huc",
 		"Description": [
-			"ǂHua"
+			"ǂHua",
+			"ǂʼAmkhoe"
 		],
 		"Added": "2009-07-29"
 	},
@@ -25100,7 +25200,8 @@
 		"Type": "language",
 		"Subtag": "kaa",
 		"Description": [
-			"Kara-Kalpak"
+			"Kara-Kalpak",
+			"Karakalpak"
 		],
 		"Added": "2005-10-16"
 	},
@@ -26510,8 +26611,7 @@
 		],
 		"Added": "2005-10-16",
 		"Comments": [
-			"as of 2008-04-21 this subtag does not include Lyngngam; see",
-			"lyg"
+			"as of 2008-04-21 this subtag does not include Lyngngam; see lyg"
 		]
 	},
 	{
@@ -26942,9 +27042,10 @@
 		"Type": "language",
 		"Subtag": "kjf",
 		"Description": [
-			"Khalaj"
+			"Khalaj [Indo-Iranian]"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2020-03-28"
 	},
 	{
 		"Type": "language",
@@ -27231,7 +27332,7 @@
 		"Type": "language",
 		"Subtag": "kkq",
 		"Description": [
-			"Kaiku"
+			"Kaeku"
 		],
 		"Added": "2009-07-29"
 	},
@@ -27384,7 +27485,7 @@
 		"Type": "language",
 		"Subtag": "klj",
 		"Description": [
-			"Turkic Khalaj"
+			"Khalaj"
 		],
 		"Added": "2009-07-29"
 	},
@@ -29213,7 +29314,8 @@
 		"Type": "language",
 		"Subtag": "kui",
 		"Description": [
-			"Kuikúro-Kalapálo"
+			"Kuikúro-Kalapálo",
+			"Kalapalo"
 		],
 		"Added": "2009-07-29"
 	},
@@ -29862,7 +29964,9 @@
 		"Description": [
 			"Nepali Kurux"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2020-03-28",
+		"Preferred-Value": "kru"
 	},
 	{
 		"Type": "language",
@@ -29934,7 +30038,11 @@
 		"Description": [
 			"Kui (India)"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2020-03-28",
+		"Comments": [
+			"see dwk, uki"
+		]
 	},
 	{
 		"Type": "language",
@@ -32132,7 +32240,8 @@
 		"Description": [
 			"Lumbee"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2020-03-28"
 	},
 	{
 		"Type": "language",
@@ -36026,6 +36135,7 @@
 		"Type": "language",
 		"Subtag": "moe",
 		"Description": [
+			"Innu",
 			"Montagnais"
 		],
 		"Added": "2009-07-29"
@@ -41447,6 +41557,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "nsb",
+		"Description": [
+			"Lower Nossob"
+		],
+		"Added": "2020-03-28"
+	},
+	{
+		"Type": "language",
 		"Subtag": "nsc",
 		"Description": [
 			"Nshi"
@@ -42191,7 +42309,9 @@
 		"Description": [
 			"Narau"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2020-03-28",
+		"Preferred-Value": "bpp"
 	},
 	{
 		"Type": "language",
@@ -44571,7 +44691,7 @@
 		"Type": "language",
 		"Subtag": "pfe",
 		"Description": [
-			"Peere"
+			"Pere"
 		],
 		"Added": "2009-07-29"
 	},
@@ -45214,7 +45334,8 @@
 		"Description": [
 			"Palpa"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2020-03-28"
 	},
 	{
 		"Type": "language",
@@ -45676,8 +45797,7 @@
 		],
 		"Added": "2009-07-29",
 		"Comments": [
-			"a Niger-Congo language spoken in Cameroon; not to be confused",
-			"with the Pinyin romanization systems used for Chinese and Tibetan"
+			"a Niger-Congo language spoken in Cameroon; not to be confused with the Pinyin romanization systems used for Chinese and Tibetan"
 		]
 	},
 	{
@@ -49246,7 +49366,11 @@
 		"Description": [
 			"Semandang"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2020-03-28",
+		"Comments": [
+			"see ebc, gef, sdq"
+		]
 	},
 	{
 		"Type": "language",
@@ -49272,6 +49396,14 @@
 			"Sherdukpen"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "sdq",
+		"Description": [
+			"Semandang"
+		],
+		"Added": "2020-03-28"
 	},
 	{
 		"Type": "language",
@@ -53016,7 +53148,8 @@
 		"Description": [
 			"Tapeba"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2020-03-28"
 	},
 	{
 		"Type": "language",
@@ -54155,7 +54288,9 @@
 		"Description": [
 			"Thudam"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2020-06-08",
+		"Preferred-Value": "ola"
 	},
 	{
 		"Type": "language",
@@ -57365,6 +57500,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "uki",
+		"Description": [
+			"Kui (India)"
+		],
+		"Added": "2020-03-28"
+	},
+	{
+		"Type": "language",
 		"Subtag": "ukk",
 		"Description": [
 			"Muak Sa-aak"
@@ -57411,6 +57554,14 @@
 			"Ukue"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "ukv",
+		"Description": [
+			"Kuku"
+		],
+		"Added": "2020-03-28"
 	},
 	{
 		"Type": "language",
@@ -59782,6 +59933,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "wlh",
+		"Description": [
+			"Welaun"
+		],
+		"Added": "2020-03-28"
+	},
+	{
+		"Type": "language",
 		"Subtag": "wli",
 		"Description": [
 			"Waioli"
@@ -62121,6 +62280,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "xnm",
+		"Description": [
+			"Ngumbarl"
+		],
+		"Added": "2020-03-28"
+	},
+	{
+		"Type": "language",
 		"Subtag": "xnn",
 		"Description": [
 			"Northern Kankanay"
@@ -62283,11 +62450,28 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "xpb",
+		"Description": [
+			"Northeastern Tasmanian",
+			"Pyemmairrener"
+		],
+		"Added": "2020-03-28"
+	},
+	{
+		"Type": "language",
 		"Subtag": "xpc",
 		"Description": [
 			"Pecheneg"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xpd",
+		"Description": [
+			"Oyster Bay Tasmanian"
+		],
+		"Added": "2020-03-28"
 	},
 	{
 		"Type": "language",
@@ -62300,11 +62484,29 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "xpf",
+		"Description": [
+			"Southeast Tasmanian",
+			"Nuenonne"
+		],
+		"Added": "2020-03-28"
+	},
+	{
+		"Type": "language",
 		"Subtag": "xpg",
 		"Description": [
 			"Phrygian"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xph",
+		"Description": [
+			"North Midlands Tasmanian",
+			"Tyerrenoterpanner"
+		],
+		"Added": "2020-03-28"
 	},
 	{
 		"Type": "language",
@@ -62329,6 +62531,14 @@
 			"Kulina Pano"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xpl",
+		"Description": [
+			"Port Sorell Tasmanian"
+		],
+		"Added": "2020-03-28"
 	},
 	{
 		"Type": "language",
@@ -62404,11 +62614,46 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "xpv",
+		"Description": [
+			"Northern Tasmanian",
+			"Tommeginne"
+		],
+		"Added": "2020-03-28"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xpw",
+		"Description": [
+			"Northwestern Tasmanian",
+			"Peerapper"
+		],
+		"Added": "2020-03-28"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xpx",
+		"Description": [
+			"Southwestern Tasmanian",
+			"Toogee"
+		],
+		"Added": "2020-03-28"
+	},
+	{
+		"Type": "language",
 		"Subtag": "xpy",
 		"Description": [
 			"Puyo"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xpz",
+		"Description": [
+			"Bruny Island Tasmanian"
+		],
+		"Added": "2020-03-28"
 	},
 	{
 		"Type": "language",
@@ -62496,7 +62741,9 @@
 		"Description": [
 			"Karranga"
 		],
-		"Added": "2013-09-10"
+		"Added": "2013-09-10",
+		"Deprecated": "2020-03-28",
+		"Preferred-Value": "dmw"
 	},
 	{
 		"Type": "language",
@@ -62868,7 +63115,11 @@
 		"Description": [
 			"Tasmanian"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2020-03-28",
+		"Comments": [
+			"see xpb, xpd, xpf, xph, xpl, xpv, xpw, xpx, xpz"
+		]
 	},
 	{
 		"Type": "language",
@@ -62914,7 +63165,8 @@
 		"Type": "language",
 		"Subtag": "xul",
 		"Description": [
-			"Ngunawal"
+			"Ngunawal",
+			"Nunukul"
 		],
 		"Added": "2013-09-10"
 	},
@@ -65437,6 +65689,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "zba",
+		"Description": [
+			"Balaibalan"
+		],
+		"Added": "2020-03-28"
+	},
+	{
+		"Type": "language",
 		"Subtag": "zbc",
 		"Description": [
 			"Central Berawan"
@@ -65693,7 +65953,9 @@
 		"Description": [
 			"Ziriya"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2020-03-28",
+		"Preferred-Value": "scv"
 	},
 	{
 		"Type": "language",
@@ -67230,6 +67492,7 @@
 			"Babalia Creole Arabic"
 		],
 		"Added": "2009-07-29",
+		"Deprecated": "2020-03-28",
 		"Preferred-Value": "bbz",
 		"Prefix": [
 			"ar"
@@ -67425,6 +67688,20 @@
 	},
 	{
 		"Type": "extlang",
+		"Subtag": "cnp",
+		"Description": [
+			"Northern Ping Chinese",
+			"Northern Pinghua"
+		],
+		"Added": "2020-03-28",
+		"Preferred-Value": "cnp",
+		"Prefix": [
+			"zh"
+		],
+		"Macrolanguage": "zh"
+	},
+	{
+		"Type": "extlang",
 		"Subtag": "coa",
 		"Description": [
 			"Cocos Islands Malay"
@@ -67534,6 +67811,20 @@
 		"Prefix": [
 			"sgn"
 		]
+	},
+	{
+		"Type": "extlang",
+		"Subtag": "csp",
+		"Description": [
+			"Southern Ping Chinese",
+			"Southern Pinghua"
+		],
+		"Added": "2020-03-28",
+		"Preferred-Value": "csp",
+		"Prefix": [
+			"zh"
+		],
+		"Macrolanguage": "zh"
 	},
 	{
 		"Type": "extlang",
@@ -69939,6 +70230,14 @@
 	},
 	{
 		"Type": "script",
+		"Subtag": "Chrs",
+		"Description": [
+			"Chorasmian"
+		],
+		"Added": "2019-09-11"
+	},
+	{
+		"Type": "script",
 		"Subtag": "Cirt",
 		"Description": [
 			"Cirth"
@@ -69993,6 +70292,14 @@
 			"Nagari"
 		],
 		"Added": "2005-10-16"
+	},
+	{
+		"Type": "script",
+		"Subtag": "Diak",
+		"Description": [
+			"Dives Akuru"
+		],
+		"Added": "2019-09-11"
 	},
 	{
 		"Type": "script",
@@ -71236,6 +71543,14 @@
 	},
 	{
 		"Type": "script",
+		"Subtag": "Toto",
+		"Description": [
+			"Toto"
+		],
+		"Added": "2020-05-12"
+	},
+	{
+		"Type": "script",
 		"Subtag": "Ugar",
 		"Description": [
 			"Ugaritic"
@@ -71298,6 +71613,14 @@
 			"Sumero-Akkadian cuneiform"
 		],
 		"Added": "2005-10-16"
+	},
+	{
+		"Type": "script",
+		"Subtag": "Yezi",
+		"Description": [
+			"Yezidi"
+		],
+		"Added": "2019-09-11"
 	},
 	{
 		"Type": "script",
@@ -72105,8 +72428,7 @@
 		],
 		"Added": "2005-10-16",
 		"Comments": [
-			"as of 2006-03-29 GB no longer includes the Channel Islands and",
-			"Isle of Man; see GG, JE, IM"
+			"as of 2006-03-29 GB no longer includes the Channel Islands and Isle of Man; see GG, JE, IM"
 		]
 	},
 	{
@@ -73619,8 +73941,7 @@
 		],
 		"Added": "2010-08-16",
 		"Comments": [
-			"Includes Northern America (021), Caribbean (029), and Central",
-			"America (013); see also 021"
+			"Includes Northern America (021), Caribbean (029), and Central America (013); see also 021"
 		]
 	},
 	{
@@ -73703,8 +74024,7 @@
 		],
 		"Added": "2005-10-16",
 		"Comments": [
-			"Does not include Caribbean (029) or Central America (013); see",
-			"also 003"
+			"Does not include Caribbean (029) or Central America (013); see also 003"
 		]
 	},
 	{
@@ -73862,9 +74182,7 @@
 			"frm"
 		],
 		"Comments": [
-			"16th century French as in Jean Nicot, \"Thresor de la langue",
-			"francoyse\", 1606, but also including some French similar to that of",
-			"Rabelais"
+			"16th century French as in Jean Nicot, \"Thresor de la langue francoyse\", 1606, but also including some French similar to that of Rabelais"
 		]
 	},
 	{
@@ -73878,9 +74196,7 @@
 			"fr"
 		],
 		"Comments": [
-			"17th century French, as catalogued in the \"Dictionnaire de",
-			"l'académie françoise\", 4eme ed. 1694; frequently includes",
-			"elements of Middle French, as this is a transitional period"
+			"17th century French, as catalogued in the \"Dictionnaire de l'académie françoise\", 4eme ed. 1694; frequently includes elements of Middle French, as this is a transitional period"
 		]
 	},
 	{
@@ -73898,8 +74214,7 @@
 		"Type": "variant",
 		"Subtag": "1959acad",
 		"Description": [
-			"\"Academic\" (\"governmental\") variant of Belarusian as",
-			"codified in 1959"
+			"\"Academic\" (\"governmental\") variant of Belarusian as codified in 1959"
 		],
 		"Added": "2008-09-30",
 		"Prefix": [
@@ -73939,46 +74254,14 @@
 		"Type": "variant",
 		"Subtag": "abl1943",
 		"Description": [
-			"Orthographic formulation of 1943 - Official in Brazil",
-			"(Formulário Ortográfico de 1943 - Oficial no Brasil)"
+			"Orthographic formulation of 1943 - Official in Brazil (Formulário Ortográfico de 1943 - Oficial no Brasil)"
 		],
 		"Added": "2015-05-06",
 		"Prefix": [
 			"pt-BR"
 		],
 		"Comments": [
-			"Denotes conventions established by the Academia Brasileira de",
-			"Letras in 1943 and generally used in Brazil until 2009"
-		]
-	},
-	{
-		"Type": "variant",
-		"Subtag": "alalc97",
-		"Description": [
-			"ALA-LC Romanization, 1997 edition"
-		],
-		"Added": "2009-12-09",
-		"Comments": [
-			"Romanizations recommended by the American Library Association",
-			"and the Library of Congress, in \"ALA-LC Romanization Tables:",
-			"Transliteration Schemes for Non-Roman Scripts\" (1997), ISBN",
-			"978-0-8444-0940-5."
-		]
-	},
-	{
-		"Type": "variant",
-		"Subtag": "aluku",
-		"Description": [
-			"Aluku dialect",
-			"Boni dialect"
-		],
-		"Added": "2009-09-05",
-		"Prefix": [
-			"djk"
-		],
-		"Comments": [
-			"Aluku dialect of the \"Busi Nenge Tongo\" English-based Creole",
-			"continuum in Eastern Suriname and Western French Guiana"
+			"Denotes conventions established by the Academia Brasileira de Letras in 1943 and generally used in Brazil until 2009"
 		]
 	},
 	{
@@ -73994,10 +74277,35 @@
 	},
 	{
 		"Type": "variant",
+		"Subtag": "alalc97",
+		"Description": [
+			"ALA-LC Romanization, 1997 edition"
+		],
+		"Added": "2009-12-09",
+		"Comments": [
+			"Romanizations recommended by the American Library Association and the Library of Congress, in \"ALA-LC Romanization Tables: Transliteration Schemes for Non-Roman Scripts\" (1997), ISBN 978-0-8444-0940-5."
+		]
+	},
+	{
+		"Type": "variant",
+		"Subtag": "aluku",
+		"Description": [
+			"Aluku dialect",
+			"Boni dialect"
+		],
+		"Added": "2009-09-05",
+		"Prefix": [
+			"djk"
+		],
+		"Comments": [
+			"Aluku dialect of the \"Busi Nenge Tongo\" English-based Creole continuum in Eastern Suriname and Western French Guiana"
+		]
+	},
+	{
+		"Type": "variant",
 		"Subtag": "ao1990",
 		"Description": [
-			"Portuguese Language Orthographic Agreement of 1990 (Acordo",
-			"Ortográfico da Língua Portuguesa de 1990)"
+			"Portuguese Language Orthographic Agreement of 1990 (Acordo Ortográfico da Língua Portuguesa de 1990)"
 		],
 		"Added": "2015-05-06",
 		"Prefix": [
@@ -74005,8 +74313,7 @@
 			"gl"
 		],
 		"Comments": [
-			"Portuguese orthography conventions established in 1990 but",
-			"not brought into effect until 2009"
+			"Portuguese orthography conventions established in 1990 but not brought into effect until 2009"
 		]
 	},
 	{
@@ -74099,12 +74406,7 @@
 			"uz"
 		],
 		"Comments": [
-			"Denotes alphabet used in Turkic republics/regions of the",
-			"former USSR in late 1920s, and throughout 1930s, which aspired to",
-			"represent equivalent phonemes in a unified fashion. Also known as: New",
-			"Turkic Alphabet; Birlәşdirilmiş Jeni Tyrk",
-			"Әlifbasь (Birlesdirilmis Jeni Tyrk Elifbasi);",
-			"Jaŋalif (Janalif)."
+			"Denotes alphabet used in Turkic republics/regions of the former USSR in late 1920s, and throughout 1930s, which aspired to represent equivalent phonemes in a unified fashion. Also known as: New Turkic Alphabet; Birlәşdirilmiş Jeni Tyrk Әlifbasь (Birlesdirilmis Jeni Tyrk Elifbasi); Jaŋalif (Janalif)."
 		]
 	},
 	{
@@ -74131,8 +74433,7 @@
 			"kea"
 		],
 		"Comments": [
-			"Barlavento is one of the two main dialect groups of",
-			"Kabuverdianu."
+			"Barlavento is one of the two main dialect groups of Kabuverdianu."
 		],
 		"Added": "2013-12-10"
 	},
@@ -74181,8 +74482,7 @@
 			"sl-rozaj"
 		],
 		"Comments": [
-			"The dialect of San Giorgio/Bila is one of the four major local",
-			"dialects of Resian"
+			"The dialect of San Giorgio/Bila is one of the four major local dialects of Resian"
 		]
 	},
 	{
@@ -74196,9 +74496,7 @@
 			"sl"
 		],
 		"Comments": [
-			"The subtag represents the alphabet codified by Adam Bohorič",
-			"in 1584 and used from the first printed Slovene book and up to the",
-			"mid-19th century."
+			"The subtag represents the alphabet codified by Adam Bohorič in 1584 and used from the first printed Slovene book and up to the mid-19th century."
 		]
 	},
 	{
@@ -74244,17 +74542,14 @@
 		"Type": "variant",
 		"Subtag": "colb1945",
 		"Description": [
-			"Portuguese-Brazilian Orthographic Convention of 1945",
-			"(Convenção Ortográfica Luso-Brasileira de 1945)"
+			"Portuguese-Brazilian Orthographic Convention of 1945 (Convenção Ortográfica Luso-Brasileira de 1945)"
 		],
 		"Added": "2015-05-06",
 		"Prefix": [
 			"pt"
 		],
 		"Comments": [
-			"Portuguese orthography conventions established in 1945,",
-			"generally in effect until 2009. This reform was not ratified in",
-			"Brazil."
+			"Portuguese orthography conventions established in 1945, generally in effect until 2009. This reform was not ratified in Brazil."
 		]
 	},
 	{
@@ -74292,9 +74587,7 @@
 			"sl"
 		],
 		"Comments": [
-			"The subtag represents the alphabet codified by Peter Dajnko",
-			"and used from 1824 to 1839 mostly in Styria (in what is now Eastern",
-			"Slovenia)."
+			"The subtag represents the alphabet codified by Peter Dajnko and used from 1824 to 1839 mostly in Styria (in what is now Eastern Slovenia)."
 		]
 	},
 	{
@@ -74390,8 +74683,7 @@
 			"oc"
 		],
 		"Comments": [
-			"Classical written standard for Occitan developed in 1935 by",
-			"Alibèrt"
+			"Classical written standard for Occitan developed in 1935 by Alibèrt"
 		]
 	},
 	{
@@ -74416,9 +74708,7 @@
 			"oc"
 		],
 		"Comments": [
-			"Written standard developed by Romanilha in 1853 and used by",
-			"Mistral and the Félibres, including derived standards such as Escolo",
-			"dóu Po, Escolo Gaston Febus, and others"
+			"Written standard developed by Romanilha in 1853 and used by Mistral and the Félibres, including derived standards such as Escolo dóu Po, Escolo Gaston Febus, and others"
 		]
 	},
 	{
@@ -74459,16 +74749,14 @@
 			"nn"
 		],
 		"Comments": [
-			"Norwegian following Ivar Aasen's orthographical principles,",
-			"including modern usage."
+			"Norwegian following Ivar Aasen's orthographical principles, including modern usage."
 		]
 	},
 	{
 		"Type": "variant",
 		"Subtag": "hsistemo",
 		"Description": [
-			"Standard H-system orthographic fallback for spelling",
-			"Esperanto"
+			"Standard H-system orthographic fallback for spelling Esperanto"
 		],
 		"Added": "2017-03-14",
 		"Prefix": [
@@ -74524,8 +74812,7 @@
 			"rm"
 		],
 		"Comments": [
-			"The spoken dialect of the Val Müstair, which has no written",
-			"standard."
+			"The spoken dialect of the Val Müstair, which has no written standard."
 		]
 	},
 	{
@@ -74564,8 +74851,7 @@
 			"pl"
 		],
 		"Comments": [
-			"The dialect of Kociewie is spoken in the region around",
-			"Starogard Gdański, Tczew and Świecie in northern Poland."
+			"The dialect of Kociewie is spoken in the region around Starogard Gdański, Tczew and Świecie in northern Poland."
 		]
 	},
 	{
@@ -74631,8 +74917,7 @@
 			"sl-rozaj"
 		],
 		"Comments": [
-			"The dialect of Lipovaz/Lipovec is one of the minor local",
-			"dialects of Resian"
+			"The dialect of Lipovaz/Lipovec is one of the minor local dialects of Resian"
 		]
 	},
 	{
@@ -74646,8 +74931,7 @@
 			"ru"
 		],
 		"Comments": [
-			"Russian orthography as established by the 1917/1918",
-			"orthographic reforms"
+			"Russian orthography as established by the 1917/1918 orthographic reforms"
 		]
 	},
 	{
@@ -74661,8 +74945,7 @@
 			"sl"
 		],
 		"Comments": [
-			"The subtag represents the alphabet codified by Franc Serafin",
-			"Metelko and used from 1825 to 1833."
+			"The subtag represents the alphabet codified by Franc Serafin Metelko and used from 1825 to 1833."
 		]
 	},
 	{
@@ -74688,8 +74971,7 @@
 			"djk"
 		],
 		"Comments": [
-			"Ndyuka dialect of the \"Busi Nenge Tongo\" English-based",
-			"Creole continuum in Eastern Suriname and Western French Guiana"
+			"Ndyuka dialect of the \"Busi Nenge Tongo\" English-based Creole continuum in Eastern Suriname and Western French Guiana"
 		]
 	},
 	{
@@ -74741,8 +75023,7 @@
 			"sl-rozaj"
 		],
 		"Comments": [
-			"The dialect of Gniva/Njiva is one of the four major local",
-			"dialects of Resian"
+			"The dialect of Gniva/Njiva is one of the four major local dialects of Resian"
 		]
 	},
 	{
@@ -74774,8 +75055,7 @@
 			"sl-rozaj"
 		],
 		"Comments": [
-			"The dialect of Oseacco/Osojane is one of the four major local",
-			"dialects of Resian"
+			"The dialect of Oseacco/Osojane is one of the four major local dialects of Resian"
 		]
 	},
 	{
@@ -74836,9 +75116,24 @@
 			"djk"
 		],
 		"Comments": [
-			"Pamaka dialect of the \"Busi Nenge Tongo\" English-based",
-			"Creole continuum in Eastern Suriname and Western French Guiana"
+			"Pamaka dialect of the \"Busi Nenge Tongo\" English-based Creole continuum in Eastern Suriname and Western French Guiana"
 		]
+	},
+	{
+		"Type": "variant",
+		"Subtag": "peano",
+		"Description": [
+			"Latino Sine Flexione",
+			"Interlingua de API",
+			"Interlingua de Peano"
+		],
+		"Prefix": [
+			"la"
+		],
+		"Comments": [
+			"Peano’s Interlingua, created in 1903 by Giuseppe Peano as an international auxiliary language"
+		],
+		"Added": "2020-03-12"
 	},
 	{
 		"Type": "variant",
@@ -74851,8 +75146,7 @@
 			"ru"
 		],
 		"Comments": [
-			"Russian orthography from the Petrine orthographic reforms of",
-			"1708 to the 1917 orthographic reform"
+			"Russian orthography from the Petrine orthographic reforms of 1708 to the 1917 orthographic reform"
 		]
 	},
 	{
@@ -74903,8 +75197,7 @@
 			"rm"
 		],
 		"Comments": [
-			"Puter is one of the five traditional written standards or",
-			"\"idioms\" of the Romansh language."
+			"Puter is one of the five traditional written standards or \"idioms\" of the Romansh language."
 		]
 	},
 	{
@@ -74993,8 +75286,7 @@
 			"sl-rozaj"
 		],
 		"Comments": [
-			"The dialect of Stolvizza/Solbica is one of the four major",
-			"local dialects of Resian"
+			"The dialect of Stolvizza/Solbica is one of the four major local dialects of Resian"
 		]
 	},
 	{
@@ -75007,8 +75299,7 @@
 			"kea"
 		],
 		"Comments": [
-			"Sotavento is one of the two main dialect groups of",
-			"Kabuverdianu."
+			"Sotavento is one of the two main dialect groups of Kabuverdianu."
 		],
 		"Added": "2013-12-10"
 	},
@@ -75038,8 +75329,7 @@
 			"rm"
 		],
 		"Comments": [
-			"Surmiran is one of the five traditional written standards or",
-			"\"idioms\" of the Romansh language."
+			"Surmiran is one of the five traditional written standards or \"idioms\" of the Romansh language."
 		]
 	},
 	{
@@ -75053,8 +75343,7 @@
 			"rm"
 		],
 		"Comments": [
-			"Sursilvan is one of the five traditional written standards or",
-			"\"idioms\" of the Romansh language."
+			"Sursilvan is one of the five traditional written standards or \"idioms\" of the Romansh language."
 		]
 	},
 	{
@@ -75068,8 +75357,7 @@
 			"rm"
 		],
 		"Comments": [
-			"Sutsilvan is one of the five traditional written standards or",
-			"\"idioms\" of the Romansh language."
+			"Sutsilvan is one of the five traditional written standards or \"idioms\" of the Romansh language."
 		]
 	},
 	{
@@ -75083,10 +75371,37 @@
 			"be"
 		],
 		"Comments": [
-			"The subtag represents Branislau Taraskievic's Belarusian",
-			"orthography as published in \"Bielaruski klasycny pravapis\" by Juras",
-			"Buslakou, Vincuk Viacorka, Zmicier Sanko, and Zmicier Sauka (Vilnia-",
-			"Miensk 2005)."
+			"The subtag represents Branislau Taraskievic's Belarusian orthography as published in \"Bielaruski klasycny pravapis\" by Juras Buslakou, Vincuk Viacorka, Zmicier Sanko, and Zmicier Sauka (Vilnia- Miensk 2005)."
+		]
+	},
+	{
+		"Type": "variant",
+		"Subtag": "tongyong",
+		"Description": [
+			"Tongyong Pinyin romanization"
+		],
+		"Added": "2020-06-08",
+		"Prefix": [
+			"zh-Latn"
+		],
+		"Comments": [
+			"Former official transcription standard for Mandarin Chinese in Taiwan."
+		]
+	},
+	{
+		"Type": "variant",
+		"Subtag": "tunumiit",
+		"Description": [
+			"Tunumiisiut",
+			"East Greenlandic",
+			"Østgrønlandsk"
+		],
+		"Added": "2020-07-16",
+		"Prefix": [
+			"kl"
+		],
+		"Comments": [
+			"Also known as Tunumiit oraasiat"
 		]
 	},
 	{
@@ -75148,8 +75463,7 @@
 			"sa"
 		],
 		"Comments": [
-			"The most ancient dialect of Sanskrit used in verse and prose",
-			"composed until about the 4th century B.C.E."
+			"The most ancient dialect of Sanskrit used in verse and prose composed until about the 4th century B.C.E."
 		]
 	},
 	{
@@ -75163,8 +75477,7 @@
 			"ca"
 		],
 		"Comments": [
-			"Variety spoken in the \"Comunidad Valenciana\" region of Spain,",
-			"where it is co-official with Spanish."
+			"Variety spoken in the \"Comunidad Valenciana\" region of Spain, where it is co-official with Spanish."
 		]
 	},
 	{
@@ -75178,8 +75491,21 @@
 			"rm"
 		],
 		"Comments": [
-			"Vallader is one of the five traditional written standards or",
-			"\"idioms\" of the Romansh language."
+			"Vallader is one of the five traditional written standards or \"idioms\" of the Romansh language."
+		]
+	},
+	{
+		"Type": "variant",
+		"Subtag": "vecdruka",
+		"Description": [
+			"Latvian orthography used before 1920s (\"vecā druka\")"
+		],
+		"Added": "2020-09-26",
+		"Prefix": [
+			"lv"
+		],
+		"Comments": [
+			"The subtag represents the old orthography of the Latvian language used during c. 1600s–1920s."
 		]
 	},
 	{
@@ -75211,8 +75537,7 @@
 		"Type": "variant",
 		"Subtag": "xsistemo",
 		"Description": [
-			"Standard X-system orthographic fallback for spelling",
-			"Esperanto"
+			"Standard X-system orthographic fallback for spelling Esperanto"
 		],
 		"Added": "2017-03-14",
 		"Prefix": [
@@ -75462,8 +75787,7 @@
 		"Type": "grandfathered",
 		"Tag": "zh-min-nan",
 		"Description": [
-			"Minnan, Hokkien, Amoy, Taiwanese, Southern Min, Southern",
-			"Fujian, Hoklo, Southern Fukien, Ho-lo"
+			"Minnan, Hokkien, Amoy, Taiwanese, Southern Min, Southern Fujian, Hoklo, Southern Fukien, Ho-lo"
 		],
 		"Added": "2001-03-26",
 		"Deprecated": "2009-07-29",
