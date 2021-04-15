@@ -64,7 +64,7 @@ class TestSubtag(unittest.TestCase):
         self.assertEqual(subtags[0].format, 'prs')
 
     def test_search_regexp(self):
-        subtags = tags.search(re.compile(r/'\d{4}'))
+        subtags = tags.search(re.compile(r'\d{4}'))
         self.assertGreater(len(subtags), 0)
 
     def test_type(self):
