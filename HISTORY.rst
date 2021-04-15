@@ -1,6 +1,15 @@
 Changelog
 =========
 
+1.1.0
+-----
+
+- Update data to version 2020-09-29 (#62)
+- Update dependencies and Python (Removed Python 3.5 support, now supports 3.6 to 3.9) (#74, #77)
+- Drop pyup support (#80)
+- Fix pypi description (#78)
+- Include MIT License in package (#67)
+
 1.0.0
 -----
 
