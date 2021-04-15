@@ -81,7 +81,7 @@ class tags():
         """
         Gets a list of :class:`language_tags.Subtag.Subtag` objects where the description matches.
 
-        :param description: a string or compiled regular expression. For example: ``search(re.compile('\d{4}'))`` if the
+        :param description: a string or compiled regular expression. For example: ``search(re.compile(r'\d{4}'))`` if the
             description of the returned subtag must contain four contiguous numerical digits.
         :type description: str or RegExp
         :param all: If set on True grandfathered and redundant tags will be included in the return
