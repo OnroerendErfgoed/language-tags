@@ -2,9 +2,8 @@
 --requirement requirements.txt
 
 # Testing
-pytest==5.2.1
-pytest-cov==2.8.1
+pytest==6.2.3
+pytest-cov==2.11.1
 
 # Documentation
-Sphinx==2.2.0
-sphinx_rtd_theme==0.4.3
+Sphinx==3.5.3
