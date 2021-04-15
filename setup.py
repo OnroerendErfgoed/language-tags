@@ -14,7 +14,7 @@ packages = [
     'language_tags.data',
 ]
 
-requires = ['six']
+requires = []
 
 setup(
     name='language_tags',
