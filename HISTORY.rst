@@ -9,6 +9,7 @@ Changelog
 - Drop pyup support (#80)
 - Fix pypi description (#78)
 - Include MIT License in package (#67)
+- Fix deprecation warnings (#84)
 
 1.0.0
 -----
