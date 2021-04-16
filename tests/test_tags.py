@@ -64,7 +64,7 @@ class TestSubtag(unittest.TestCase):
         self.assertEqual(subtags[0].format, 'prs')
 
     def test_search_regexp(self):
-        subtags = tags.search(re.compile('\d{4}'))
+        subtags = tags.search(re.compile(r'\d{4}'))
         self.assertGreater(len(subtags), 0)
 
     def test_type(self):
@@ -99,7 +99,7 @@ class TestSubtag(unittest.TestCase):
         self.assertIn('\'en\' is not a macrolanguage.', context.exception.args)
 
     def test_date(self):
-        self.assertIsNotNone(re.compile('\d{4}\-\d{2}\-\d{2}').search(tags.date()))
+        self.assertIsNotNone(re.compile(r'\d{4}\-\d{2}\-\d{2}').search(tags.date()))
 
     def test_description(self):
         description = tags.description('nl-BE')
