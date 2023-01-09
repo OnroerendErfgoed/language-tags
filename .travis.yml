@@ -1,10 +1,9 @@
-sudo: false
+dist: focal
 language: python
 python:
- - 3.6
- - 3.7
  - 3.8
  - 3.9
+ - 3.10
 install:
  - pip install pytest coveralls pytest-cov
  - python setup.py develop
