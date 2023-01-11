@@ -38,6 +38,5 @@ setup(
     platforms='any',
     packages=packages,
     include_package_data=True,
-    install_requires=requires,
-    test_suite='nose.collector'
+    install_requires=requires
 )
