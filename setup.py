@@ -18,7 +18,7 @@ requires = []
 
 setup(
     name='language_tags',
-    version='1.1.0',
+    version='1.2.0',
     url='https://github.com/OnroerendErfgoed/language-tags',
     license='MIT',
     author='Flanders Heritage Agency',

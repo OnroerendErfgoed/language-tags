@@ -3,8 +3,8 @@ IANA Language Tags for Python
 
 .. image:: https://badge.fury.io/py/language-tags.png
         :target: http://badge.fury.io/py/language-tags
-.. image:: https://travis-ci.org/OnroerendErfgoed/language-tags.png?branch=master
-        :target: https://travis-ci.org/OnroerendErfgoed/language-tags
+.. image:: https://app.travis-ci.com/OnroerendErfgoed/language-tags.png?branch=develop
+        :target: https://app.travis-ci.com/OnroerendErfgoed/language-tags
 .. image:: https://coveralls.io/repos/OnroerendErfgoed/language-tags/badge.png
         :target: https://coveralls.io/r/OnroerendErfgoed/language-tags
 .. image:: https://readthedocs.org/projects/language-tags/badge/?version=latest

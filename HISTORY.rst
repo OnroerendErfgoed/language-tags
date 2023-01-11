@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.2.0
+-----
+
+- Update data to version 2022-06-28 (#89)
+- Drop support for Python 3.6 and 3.7 and add support for Python 3.10 (#87)
+
 1.1.0
 -----
 
