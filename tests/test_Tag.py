@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import unittest
 from language_tags.Tag import Tag
 

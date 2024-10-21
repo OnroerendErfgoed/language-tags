@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from language_tags.Subtag import Subtag
 from language_tags.Tag import Tag
 from language_tags import data
