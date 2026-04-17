@@ -35,4 +35,14 @@ jobs:
           pip install -e .
 
       - name: Python tests
-        run: pytest tests --exitfirst --capture=no -vvv --full-trace
+        run: pytest tests --exitfirst --capture=no -vvv --full-trace --cov=language_tags --cov-report=xml
+
+      - name: Code Coverage Report
+        if: matrix.python-version == '3.11'
+        uses: orgoro/coverage@v3.2
+        with:
+          coverageFile: coverage.xml
+          token: ${{ secrets.GITHUB_TOKEN }}
+          thresholdAll: 0.9
+          thresholdNew: 0.9
+          thresholdModified: 0.9
