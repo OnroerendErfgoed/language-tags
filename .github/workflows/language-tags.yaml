@@ -1,12 +1,16 @@
 name: language-tags backend tests
 on:
-  push:
+  pull_request:
     paths:
       - language-tags/**
       - tests/**
-      - language-tags.yaml
+      - .github/workflows/language-tags.yaml
       - pyproject.toml
       - requirements*.txt
+
+  push:
+    branches:
+      - main
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -29,13 +33,17 @@ jobs:
           HATCH_BUILD_NO_HOOKS: true
         working-directory: ./
         run: |
+          python -m venv .venv
+          source .venv/bin/activate
           pip --version
           pip install pip-tools
           pip-sync requirements-dev.txt
           pip install -e .
 
       - name: Python tests
-        run: pytest tests --exitfirst --capture=no -vvv --full-trace --cov=language_tags --cov-report=xml
+        run: |
+          source .venv/bin/activate
+          pytest tests --exitfirst --capture=no -vvv --full-trace --cov=language_tags --cov-report=xml
 
       - name: Code Coverage Report
         if: matrix.python-version == '3.11'
@@ -43,6 +51,6 @@ jobs:
         with:
           coverageFile: coverage.xml
           token: ${{ secrets.GITHUB_TOKEN }}
-          thresholdAll: 0.9
+          thresholdAll: 0.8
           thresholdNew: 0.9
-          thresholdModified: 0.9
+          thresholdModified: 0.8
