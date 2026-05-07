@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #
 # language_tags documentation build configuration file, created by
 # sphinx-quickstart on Mon Sep  8 10:24:40 2014.

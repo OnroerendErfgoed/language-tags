@@ -1,9 +1,58 @@
-# Runtime requirements
---requirement requirements.txt
-
-# Testing
-pytest==7.2.0
-pytest-cov==4.0.0
-
-# Documentation
-Sphinx==6.1.2
+alabaster==0.7.16
+    # via sphinx
+babel==2.16.0
+    # via sphinx
+certifi==2024.8.30
+    # via requests
+charset-normalizer==3.3.2
+    # via requests
+coverage==7.6.1
+    # via pytest-cov
+docutils==0.19
+    # via sphinx
+idna==3.10
+    # via requests
+imagesize==1.4.1
+    # via sphinx
+iniconfig==2.0.0
+    # via pytest
+jinja2==3.1.4
+    # via sphinx
+markupsafe==2.1.5
+    # via jinja2
+packaging==24.1
+    # via
+    #   pytest
+    #   sphinx
+pluggy==1.5.0
+    # via pytest
+pygments==2.18.0
+    # via sphinx
+pytest==8.3.3
+    # via
+    #   language-tags (pyproject.toml)
+    #   pytest-cov
+pytest-cov==5.0.0
+    # via language-tags (pyproject.toml)
+requests==2.32.3
+    # via sphinx
+snowballstemmer==2.2.0
+    # via sphinx
+sphinx==6.1.2
+    # via language-tags (pyproject.toml)
+sphinxcontrib-applehelp==2.0.0
+    # via sphinx
+sphinxcontrib-devhelp==2.0.0
+    # via sphinx
+sphinxcontrib-htmlhelp==2.1.0
+    # via sphinx
+sphinxcontrib-jsmath==1.0.1
+    # via sphinx
+sphinxcontrib-qthelp==2.0.0
+    # via sphinx
+sphinxcontrib-serializinghtml==2.0.0
+    # via sphinx
+urllib3==2.2.3
+    # via requests
+uv==0.4.1
+    # via language-tags (pyproject.toml)

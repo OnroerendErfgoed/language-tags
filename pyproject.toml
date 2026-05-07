@@ -1,0 +1,60 @@
+[build-system]
+requires = ["hatchling", "hatch-fancy-pypi-readme"]
+build-backend = "hatchling.build"
+
+[project]
+version = "1.3.0"
+name = "language-tags"
+dynamic = ["readme"]
+authors = [
+    { name = "Flanders Heritage Agency", email = "ict@onroerenderfgoed.be" },
+]
+license = "MIT"
+description = "This project is a Python version of the language-tags Javascript project."
+requires-python = ">=3.10,<3.13"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python",
+    "Framework :: Pyramid",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+]
+
+[project.urls]
+History = "https://github.com/OnroerendErfgoed/language-tags/blob/master/HISTORY.rst"
+Tracker = "https://github.com/OnroerendErfgoed/language-tags/issues"
+Source = "https://github.com/OnroerendErfgoed/language-tags"
+Documentation = "https://language-tags.readthedocs.io/en/latest/"
+
+[project.optional-dependencies]
+dev = [
+    "uv==0.4.1",
+    "sphinx==6.1.2",
+    "pytest==8.3.3",
+    "pytest-cov==5.0.0",
+]
+
+##
+# Build tool specific
+##
+[tool.hatch.build.targets.wheel]
+# In the wheel we want to have language-tags in the root as python module.
+only-include = [
+    "/language_tags",
+]
+
+[tool.hatch.metadata]
+# This allows us to use github links as dependencies
+allow-direct-references = true
+
+[tool.hatch.metadata.hooks.fancy-pypi-readme]
+content-type = "text/x-rst"
+fragments = [
+  { path = "README.rst" },
+  { path = "HISTORY.rst" },
+]
