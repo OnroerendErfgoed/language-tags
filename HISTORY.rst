@@ -1,6 +1,13 @@
 Changelog
 =========
 
+1.3.0
+-----
+
+- Migrate to latest data #97
+- Pyproject and GitHub Actions (#92)
+- Add test-coverage (#96)
+
 1.2.0
 -----
 
