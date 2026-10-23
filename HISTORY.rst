@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.3.2
+-----
+
+- Add support for python 3.15 (#103)
+- Update dependencies (#105)
+
 1.3.1
 -----
 
