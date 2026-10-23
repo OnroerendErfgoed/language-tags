@@ -2,7 +2,7 @@ name: language-tags backend tests
 on:
   pull_request:
     paths:
-      - language-tags/**
+      - language_tags/**
       - tests/**
       - .github/workflows/language-tags.yaml
       - pyproject.toml
@@ -45,7 +45,7 @@ jobs:
       - name: Python tests
         run: |
           source .venv/bin/activate
-          pytest tests --exitfirst --capture=no -vvv --full-trace --cov=language_tags --cov-report=xml
+          pytest tests --exitfirst --capture=no -vvv --full-trace --cov --cov-report=xml
 
       - name: Code Coverage Report
         if: matrix.python-version == '3.11'

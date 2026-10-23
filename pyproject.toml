@@ -61,3 +61,14 @@ fragments = [
   { path = "README.rst" },
   { path = "HISTORY.rst" },
 ]
+
+[tool.coverage.run]
+# Measure the package wherever it is imported from, so coverage also works
+# when the tests run against the installed wheel instead of the source tree.
+source_pkgs = ["language_tags"]
+
+[tool.coverage.paths]
+source = [
+    "language_tags/",
+    "*/site-packages/language_tags/",
+]
