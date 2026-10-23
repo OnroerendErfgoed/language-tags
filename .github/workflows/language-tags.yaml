@@ -2,7 +2,7 @@ name: language-tags backend tests
 on:
   pull_request:
     paths:
-      - language-tags/**
+      - language_tags/**
       - tests/**
       - .github/workflows/language-tags.yaml
       - pyproject.toml
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [ "3.10", "3.11", "3.12", "3.13", "3.14" ]
+        python-version: [ "3.10", "3.11", "3.12", "3.13", "3.14", "3.15" ]
 
     steps:
       - uses: actions/checkout@v4
@@ -24,6 +24,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
+          allow-prereleases: ${{ matrix.python-version == '3.15' }}
       # You can test your matrix by printing the current Python version
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
@@ -38,12 +39,13 @@ jobs:
           pip --version
           pip install pip-tools
           pip-sync requirements-dev.txt
-          pip install -e .
+          pip wheel --no-deps --wheel-dir dist .
+          pip install --no-deps --only-binary :all: dist/*.whl
 
       - name: Python tests
         run: |
           source .venv/bin/activate
-          pytest tests --exitfirst --capture=no -vvv --full-trace --cov=language_tags --cov-report=xml
+          pytest tests --exitfirst --capture=no -vvv --full-trace --cov --cov-report=xml
 
       - name: Code Coverage Report
         if: matrix.python-version == '3.11'
